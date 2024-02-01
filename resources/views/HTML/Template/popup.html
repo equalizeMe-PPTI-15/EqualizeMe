@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>popup</title>
+    
+        <!-- bootstrap -->
+        <link href="../../Style/bootstrap/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Patrick+Hand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="../../Style/Template/popup.css">
+    
+    
+    
+        <style>
+            * {
+                font-family: 'Quicksand', 'Amaranth', cursive, Arial, sans-serif;
+            }
+    
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+</head>
+<body>
+    <div class="container-popup" id="blur">
+        <div class="content-popup">
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit sapiente laborum laboriosam mollitia perspiciatis?</h2>
+            <img src="../../Image/412503.jpg" alt="">
+            <a href="#" onclick="toggle_popup()">ReadMore</a>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <h2>Lorem ipsum dolor sit amet </h2>
+        <img src="../../Image/412503.jpg" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, iste earum. Natus quas provident qui veritatis voluptatum. Enim, delectus ex? Consequuntur iste corrupti neque consequatur accusantium illum voluptatum repudiandae assumenda.</p>
+        <a href="#" onclick="toggle_popup()">close</a>
+    </div>
+    <script type="text/javascript">
+        function toggle_popup(){
+            var blur = document.getElementById('blur')
+            blur.classList.toggle('active')
+            var popup = document.getElementById('popup')
+            popup.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+.container-statistik{
+    /* border: solid red; */
+    border-radius: 30px;
+    background-color: #CDF0F3;
+    padding: 2%;
+    margin-bottom: 1%;
+    width: 100%;
+    display: flexbox;
+    align-items: center;
+}
+.banner-h3{
+    /* border: solid green; */
+    /* margin-bottom: 1%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-h3 h3{
+
+    /* border: solid blue; */
+    font-weight: bold;
+}
+.banner-img-statistik{
+    /* border: solid brown; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.banner-img-statistik img{
+    width: 90%;
+    border-radius: 10px;
+}
+
+/* .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: opacity 0.4s ease-in-out;
+    background-color: black;
+}
+.overlay-content{
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+.content1 a:hover .overlay{
+    opacity: 0.8;
+} */
+
+.h3-berita{
+    /* border: solid black; */
+    display: flex;
+    padding: 3%;
+    justify-content: start;
+    border-bottom: 1px solid grey;
+}
+.h3-berita h3{
+    /* font-weight: bold; */
+    /* text-align: start; */
+    color: black;
+}
+
+.container-content-berita{
+    /* border: solid yellow; */
+
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 5%;
+}
+
+.content-berita{
+    /* border: solid blue; */
+    /* border-top: 0.5px solid black; */
+    border-bottom: 0.5px solid grey;
+    max-height: 23vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3%;
+
+}
+
+.content-berita a{
+    
+    text-decoration: none;
+}
+.content-berita a:hover {
+    padding: 0;
+    margin: 0;
+    border-radius: 4%;
+    background-color: rgba(128, 128, 128, 0.137);
+}
+.content-h6-berita{
+    width: 48%;
+    /* border: solid green; */
+    padding: 2%;
+    color: black;
+    text-align: justify;
+    max-height: 19vh;
+    overflow: auto;
+}
+.content-h6-berita h6{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.beritanya{
+    /* border: solid black; */
+    width: 100%;
+    /* height: 80vh; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.beritanya img{
+    /* border: solid red; */
+    width: 50%;
+    height: 20vh;
+    border-radius: 5%;
+}
+
+
+
+
+@media (max-width: 420px){
+    .container-statistik{
+        /* border: solid black; */
+        margin-bottom: 2%;
+        /* display: flexbox; */
+        /* align-items: center; */
+    }
+    
+    .container-statistik .banner-h3 h3{
+        /* border: solid black; */
+        font-size: 14px;
+    }
+    .banner-img-statistik img{
+        /* border: solid red; */
+        width: 70%;
+    }
+
+
+}
+
+
+
+
+
+.container-pagination-luar{
+    width: 100%;
+    height: 14vh;
+    max-height: 20vh;
+    /* border: solid red; */
+    /* padding: 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20%;
+}
+
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    max-height: 15vh;
+    width: 100%;
+    /* padding: 5px; */
+    /* border: solid black; */
+    /* background-color: aqua; */
+}
+.pagination ul{
+    /* border: solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 10vh;
+    /* max-width: 100%; */
+    max-height: fit-content;
+    background-color: #fff;
+    padding: 8px;
+    /* border-radius: 50px; */
+}
+.pagination ul li{
+    color: #03848F;
+    /* border: solid black; */
+    /* color: #00000061; */
+    list-style: none;
+    line-height: 45px;
+    text-align: center;
+    font-size: 12px;
+    /* font-weight: 500; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.pagination ul li.numb{
+    border-radius: 50%;
+    margin: 0 1px;
+    height: 45px;
+    width: 20px;
+    max-width: 20px;
+}
+.pagination ul li.dots{
+    font-size: 12px;
+    cursor: default;
+}
+
+
+.pagination ul li.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: solid red; */
+    padding: 0 10px;
+}
+
+.pagination ul li.prev{
+    border-radius: 25px 5px 5px 25px;
+    
+}
+.pagination ul li.next{
+    border-radius: 5px 25px 25px 5px;
+    
+}
+
+.pagination ul li.active{
+    color: white;
+    /* background-color: RED; */
+    background-color: #03848F;
+    border-radius: 50px;
+}
+.pagination ul li.numb:hover{
+    color: #03848F;
+    background-color: #CDF0F3;
+    border-radius: 50px;
+    
+}
+.pagination ul li.btn:hover{
+    color: white;
+    
+    background-color: #03848F;
+    /* background-color: ; */
+    
+}

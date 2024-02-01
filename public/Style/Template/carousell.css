@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.tempat-carousell{
+    width: 100%;
+    /* border: solid black; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    
+}
+.h3-carousell{
+    /* border: solid red; */
+    /* width: 100%; */
+    margin-bottom: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* height: 10vh; */
+    /* align-items: center; */
+}
+.h3-carousell h3{
+    /* border: solid black; */
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.content-carousell{
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #EFEFEF; */
+    /* border: solid blue; */
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    /* background-color: grey; */
+    /* border: solid black; */
+    padding: 40px;  
+}
+
+.slide-content{
+    /* border: solid red; */
+    /* margin: 0 40px; */
+    /* padding: 45px 20px; */
+    /* overflow: hidden; */
+    width: 80%;
+    height: fit-content;
+    /* border-radius: 6px; */
+}
+.slide-content2{
+    /* border: solid red; */
+    /* margin: 0 40px; */
+    /* padding: 45px 20px; */
+    /* overflow: hidden; */
+    width: 80%;
+    height: fit-content;
+    /* border-radius: 6px; */
+}
+.card{
+    /* width: 320px; */
+    /* border-radius: 25px; */
+    /* border: solid black; */
+    box-shadow:  5px 8px 5px 0  rgba(20,20,20,0.4);
+    /* border-radius: 20px; */
+    width: 100%;
+    /* height: 50vh; */
+    background-color: #FFF;
+}
+
+.image-content, .card-content{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 5%; */
+    /* border: solid black; */
+}
+
+.card-content{
+    padding: 10px 14px;
+    
+}
+
+
+.overlay{
+    /* border-radius: 0px; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* border: solid red; */
+    /* background-color: rgb(101, 202, 209); */
+    /* border-radius: 25px 25px 0 25px; */
+}
+
+.image-content{
+    row-gap: 5px;
+    position: relative;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+}
+/* 
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070F4;
+
+} */
+.overlay::after{
+    /* border-radius: 0 25px 0 0; */
+    background-color: #FFF;
+}
+
+.card-image{
+    position: relative;
+    /* height: 150px;
+    width: 150px; */
+    width: 100%;
+    display: flex;
+    /* padding: 5px; */
+    justify-content: center;
+    /* border-radius: 50%; */
+    /* border: solid red; */
+    /* background: #FFF; */
+    /* padding: 3px; */
+}
+.card-image img{
+    width: 100%;
+    height: 25vh;
+}
+/* .card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070F4;
+} */
+.name{
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+.description{
+    font-size: 10px;
+    color: #707070;
+    text-align: justify;
+}
+.button-selengkapnya{
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: rgb(101, 202, 209);
+    border-radius:6px;
+    /* margin: 14px; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button-selengkapnya:hover{
+    background: #CDF0F3;
+}
+
+.swipper-navBtn{
+    color: rgb(101, 202, 209);
+    transition: color 0.3s ease;
+}
+.swipper-navBtn:hover{
+    color: #CDF0F3;
+}
+
+.swipper-navBtn::before,
+.swipper-navBtn::after{
+    font-size: 40px;
+}
+
+.swipper-button-next{
+    right: 0;
+}
+.swipper-button-prev{
+    left: 0;
+}
+
+.swiper-pagination-bullet{
+    background-color: #CDF0F3;
+    border: 0.5px solid rgba(0, 0, 0, 0.409);
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: rgb(101, 202, 209);
+    border: 0.5px solid rgba(0, 0, 0, 0.285);
+    opacity: 1;
+}
+.swiper-pagination2-bullet{
+    background-color: rgb(101, 202, 209);
+    opacity: 1;
+}
+.swiper-pagination2-bullet-active{
+    background-color: #CDF0F3;
+    border: 0.1px solid rgba(128, 128, 128, 0.333);
+    opacity: 1;
+}
+
+
+
+@media screen and(max-width:768px){
+    .slide-content{
+        margin: 0 10px;
+    }
+    
+    .swipper-navBtn{
+        display: none;
+    }
+}
