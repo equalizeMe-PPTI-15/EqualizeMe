@@ -1,0 +1,2 @@
+# EqualizeMe
+Project Software Engineering
