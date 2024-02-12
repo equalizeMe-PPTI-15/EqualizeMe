@@ -50,48 +50,38 @@
 }
 
 .slide-content{
-    /* border: solid red; */
+    /* border: solid mediumorchid; */
     /* margin: 0 40px; */
     /* padding: 45px 20px; */
     /* overflow: hidden; */
     width: 80%;
-    height: 51vh;
-    max-height: 51vh;
+    height: 55vh;
+    max-height: 55vh;
     /* border-radius: 6px; */
 }
 .slide-content2{
-    /* border: solid red; */
+    /* border: solid maroon; */
     /* margin: 0 40px; */
     /* padding: 45px 20px; */
     /* overflow: hidden; */
     width: 80%;
-    height: 51vh;
-    max-height: 51vh;
+    height: 55vh;
+    max-height: 55vh;
     /* border-radius: 6px; */
 }
 .card{
     /* width: 320px; */
     /* border-radius: 25px; */
-    /* border: solid black; */
+    /* border: solid sblue; */
     box-shadow:  5px 8px 5px 0  rgba(20,20,20,0.4);
     /* border-radius: 20px; */
     width: 100%;
-    /* height: 50vh; */
+    height: 55vh;
+    max-height: 55vh;
     background-color: #FFF;
 }
 
-.image-content, .card-content{   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* margin-bottom: 5%; */
-    /* border: solid black; */
-}
 
-.card-content{
-    padding: 10px 14px;
-    
-}
 
 
 .overlay{
@@ -152,16 +142,57 @@
     border-radius: 50%;
     border: 4px solid #4070F4;
 } */
+.image-content, .card-content{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 5%; */
+    /* border: solid red; */
+}
+
+.card-content{
+    padding: 8px 5px 5px 5px;
+    /* border: solid red; */
+    height: 29vh;
+    max-height: 29vh;
+}
+
 .name{
-    font-size: 16px;
+    /* overflow: auto; */
+    font-size: 12px;
     font-weight: bold;
     color: #333;
-}
+    width: 97%;
+    height: 9vh;
+    max-height: 9vh;
+    /* border: solid blue; */
+    /* overflow: inherit; */
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    /* text-align: justify; */
+}   
 .description{
     font-size: 10px;
     color: #707070;
     text-align: justify;
+    width: 100%;
+    max-width: 100%;
+    height: 15vh;
+    max-height: 15vh;
+    padding: 2%;
+    /* border: solid green; */
+    overflow: auto;
 }
+
+
+
+
+
+
+
+
+
 .button-selengkapnya{
     border: none;
     font-size: 16px;
