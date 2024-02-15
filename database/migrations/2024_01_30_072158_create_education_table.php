@@ -14,7 +14,12 @@ return new class extends Migration
         Schema::create('education', function (Blueprint $table) {
             $table->id('idEducation');
             $table->string('educationTitle');
-            $table->string('educationContent');
+            $table->text('educationContent');
+            $table->string('headingEducation');
+            $table->string('gambarEducation');
+            $table->string('videoEducation');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 
