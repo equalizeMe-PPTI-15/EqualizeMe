@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Berita</title>
+    <title>Edukasi</title>
 
     <!-- bootstrap -->
     <link href="../../Style/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -17,12 +17,14 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-    <!-- Wrapper -->
-    <link rel="stylesheet" href="../../Style/Berita/wrapper.css">
-    <link rel="stylesheet" href="../../Style/Berita/style_berita.css">
+    <!-- pencarian -->
+    <link rel="stylesheet" href="../../Style/Edu/wrapper_Edu.css">
 
     <!-- popup -->
-    <link rel="stylesheet" href="../../Style/Berita/popup_berita.css">
+    <link rel="stylesheet" href="../../Style/Edu/popup_edu.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../Style/Edu/style_edu.css">
 
     <style>
         * {
@@ -38,9 +40,9 @@
 </head>
 
 <body>
-
     <!-- Pencarian -->
-    <div class="container-wrapper" style="box-sizing: border-box;  margin-bottom: 2vh;">
+    <div class="container-wrapper"
+        style="box-sizing: border-box;  margin-bottom: 2vh;">
         <div class="search_wrap search_wrap_2" style="border:0.2px solid grey; border-radius: 3px;">
             <div class="search_box">
                 <div class="btn btn_common">
@@ -51,162 +53,126 @@
         </div>
     </div>
 
-    <!-- statistik -->
-    <div class="container-statistik">
-        <div class="banner-h3">
-            <h3>Statistik Presentase Pelecehan Seksual</h3>
-        </div>
-        <div class="banner-img-statistik">
-            <img src="../../Image/412503.jpg" alt=""
-            style="width: 90%; max-width:90%; height: 100%; max-height: 100%; border-radius: 8px;">
-        </div>
-    </div>
 
-    <!-- content -->
-    <div class="container-content-berita">
-        <div class="h3-berita">
-            <h3>Berita</h3>
-        </div>
-        <div class="container-berita">
-            <div class="content-berita">    
-                <a href="#" onclick="toggle_popup()">
-                    <div class="beritanya">
-                        <img src="../../Image/berita1.jpg" alt="">
-                        <div class="content-h6-berita">
-                            <h6>Wajib Di Ingat Bahwa Perempuan Itu Bukan Properti </h6>
-                            <span class="baca-span" >baca selengkapnya...</span>
-                        </div>
-                    </div>
-                
-                    <div class="span-icon-date">
-                        <span><img src="../../Image/favicon.ico" alt="icon binus"><h6>Binus University</h6> <p>2d</p></span>
-                    </div>
-                </a>
-                
-            </div>
-            <div class="content-berita">
-                <a href="#">
-                    <div class="beritanya">
+    <!-- content edu -->
+    <div class="container-edu">
+        <div class="content-edu">
+            <a href="#" onclick="toggle_popup()">
+                <div class="row-edu">
+                    <div class="gambar-content">
                         <img src="../../Image/412503.jpg" alt="">
-                        <div class="content-h6-berita">
-                            <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, labore! </h6>
-                            <span class="baca-span">baca selengkapnya...</span>
-                        </div>
                     </div>
-                    <div class="span-icon-date">
-                        <span><img src="../../Image/favicon.ico" alt="icon binus"><h6>Binus University</h6> <p>2d</p></span>
-    
+                    <div class="content-edu-h6">
+                        <h6>Ciri - ciri pelecehan seksual</h6>
                     </div>
-                </a>
-
-            </div>
-            <div class="content-berita">
-                <a href="#">
-                    <div class="beritanya">
-                        <img src="../../Image/412503.jpg" alt="">
-                        <div class="content-h6-berita">
-                            <h6>{{Judul Content Berita}} </h6> <span class="baca-span" >baca selengkapnya...</span>
-                        </div>
-                    </div>
-                    
-                <div class="span-icon-date">
-                    <span><img src="../../Image/favicon.ico" alt="icon binus"><h6>Binus University</h6> <p>2d</p></span>
                 </div>
-                </a>
-            </div>
-            <div class="content-berita">
-                <a href="#">
-                    <div class="beritanya">
+            </a>
+            <a href="#" onclick="toggle_popup()">
+                <div class="row-edu">
+                    <div class="gambar-content">
+                        <img src="../../Image/logo.jpg" alt="">
+                    </div>
+                    <div class="content-edu-h6">
+                        <h6>Ciri - ciri pelecehan seksual</h6>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="row-edu">
+                    <div class="gambar-content">
                         <img src="../../Image/412503.jpg" alt="">
-                        <div class="content-h6-berita">
-                            <h6>{{Judul Content Berita}} </h6> <span class="baca-span" >baca selengkapnya...</span>
-                        </div>
                     </div>
-                    <div class="span-icon-date">
-                        <span><img src="../../Image/favicon.ico" alt="icon binus"><h6>Binus University</h6> <p>2d</p></span>
-    
+                    <div class="content-edu-h6">
+                        <h6>Ciri - ciri pelecehan seksual</h6>
                     </div>
-                </a>
-            </div>
-            <div class="content-berita">
-                <a href="#">
-                    <div class="beritanya">
+                </div>
+            </a>
+            <a href="#">
+                <div class="row-edu">
+                    <div class="gambar-content">
                         <img src="../../Image/412503.jpg" alt="">
-                        <div class="content-h6-berita">
-                            <h6>{{Judul Content Berita}} </h6> <span class="baca-span" >baca selengkapnya...</span>
-                        </div>
                     </div>
-                    <div class="span-icon-date">
-                        <span><img src="../../Image/favicon.ico" alt="icon binus"><h6>Binus University</h6> <p>2d</p></span>
-    
+                    <div class="content-edu-h6">
+                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, accusantium?</h6>
                     </div>
-                </a>
-            </div>
-            <div class="content-berita">
-                <a href="#">
-                    <div class="beritanya">
+                </div>
+            </a>
+            <a href="#">
+                <div class="row-edu">
+                    <div class="gambar-content">
                         <img src="../../Image/412503.jpg" alt="">
-                        <div class="content-h6-berita">
-                            <h6>{{Judul Content Berita}} </h6> <span class="baca-span" >baca selengkapnya...</span>
-                        </div>
                     </div>
-                    <div class="span-icon-date">
-                        <span><img src="../../Image/favicon.ico" alt="icon binus"><h6>Binus University</h6> <p>2d</p></span>
-    
+                    <div class="content-edu-h6">
+                        <h6>Ciri - ciri pelecehan seksual</h6>
                     </div>
-                </a>
-            </div>
-            <div class="content-berita">
-                <a href="#">
-                    <div class="beritanya">
+                </div>
+            </a>
+            <a href="#">
+                <div class="row-edu">
+                    <div class="gambar-content">
                         <img src="../../Image/412503.jpg" alt="">
-                        <div class="content-h6-berita">
-                            <h6>{{Judul Content Berita}} </h6> <span class="baca-span" >baca selengkapnya...</span>
-                        </div>
                     </div>
-                    <div class="span-icon-date">
-                        <span><img src="../../Image/favicon.ico" alt="icon binus"><h6>Binus University</h6> <p>2d</p></span>
-    
+                    <div class="content-edu-h6">
+                        <h6>Ciri - ciri pelecehan seksual</h6>
                     </div>
-                </a>
-            </div>
-            <div class="content-berita">
-                <a href="#">
-                    <div class="beritanya">
+                </div>
+            </a>
+            <a href="#">
+                <div class="row-edu">
+                    <div class="gambar-content">
                         <img src="../../Image/412503.jpg" alt="">
-                        <div class="content-h6-berita">
-                            <h6>{{Judul Content Berita}} </h6> <span class="baca-span" >baca selengkapnya...</span>
-                        </div>
                     </div>
-                    <div class="span-icon-date">
-                        <span><img src="../../Image/favicon.ico" alt="icon binus"><h6>Binus University</h6> <p>2d</p></span>
-    
+                    <div class="content-edu-h6">
+                        <h6>Ciri - ciri pelecehan seksual</h6>
                     </div>
-                </a>
-            </div>
-            <div class="content-berita">
-                <a href="#">
-                    <div class="beritanya">
+                </div>
+            </a>
+            <a href="#">
+                <div class="row-edu">
+                    <div class="gambar-content">
                         <img src="../../Image/412503.jpg" alt="">
-                        <div class="content-h6-berita">
-                            <h6>{{Judul Content Berita}} </h6> <span class="baca-span" >baca selengkapnya...</span>
-                        </div>
                     </div>
-                    <div class="span-icon-date">
-                        <span><img src="../../Image/favicon.ico" alt="icon binus"><h6>Binus University</h6> <p>2d</p></span>
-    
+                    <div class="content-edu-h6">
+                        <h6>Ciri - ciri pelecehan seksual</h6>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="row-edu">
+                    <div class="gambar-content">
+                        <img src="../../Image/412503.jpg" alt="">
+                    </div>
+                    <div class="content-edu-h6">
+                        <h6>Ciri - ciri pelecehan seksual</h6>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="row-edu">
+                    <div class="gambar-content">
+                        <img src="../../Image/412503.jpg" alt="">
+                    </div>
+                    <div class="content-edu-h6">
+                        <h6>Ciri - ciri pelecehan seksual</h6>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 
-    <!-- popup -->
 
+
+    <!-- popup edu-->
     <div class="popup" id="popup">
         <h2>{{Judul Content}}</h2>
+        <!-- <iframe src="../../Image/412503.jpg" ></iframe> -->
         <div class="content-text-popup">
-            <img src="../../Image/412503.jpg" alt="">
+            <video controls="true">
+                <source src="../../Image/dummy.mp4">
+            </video>
+            <!-- <img src="../../Image/412503.jpg" alt=""> -->
+            <!-- <iframe src="https://www.youtube.com/watch?v=pQr4O1OITJo&t=196s" frameborder="0" width="400" height="200"></iframe> -->
+            <!-- <iframe src="https://youtu.be/BFu8Kd_QfGI?si=TQ0k51ThlBIBFkl_" frameborder="0" width="100%" height="200" allowfullscreen></iframe> -->
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis itaque asperiores animi unde earum
                 voluptates incidunt illum dolor error, enim beatae atque voluptatem repellendus ad doloribus ex tempora,
                 voluptas quos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente aut minus distinctio,
@@ -218,34 +184,27 @@
                 sint illo totam quibusdam non vero, quis facere doloremque sed! Facere beatae enim quam dolorum modi
                 perferendis quia optio! Mollitia placeat error adipisci deleniti consectetur quidem sint, neque totam
                 aut alias eligendi minus reiciendis quibusdam sed soluta ducimus obcaecati sequi? Voluptas reiciendis
-                eum deleniti magnam ipsam eligendi maiores quaerat repudiandae ex quidem.</p>
+                eum deleniti magnam ipsam eligendi maiores quaerat repudiandae ex quidem.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis ea earum cumque voluptates reiciendis officiis quasi quod? Ad adipisci quidem eveniet voluptate. Neque reiciendis repudiandae obcaecati maxime animi, quos dolore dolor nihil. Natus eligendi temporibus aliquid praesentium sint ab ratione! Eveniet quo aperiam quos ut nisi voluptatum perspiciatis, explicabo, reiciendis animi molestias et quasi tempore nobis veritatis? Cum, deleniti. Quibusdam tenetur odio deserunt voluptatibus, sapiente enim quasi, libero laudantium distinctio atque, odit blanditiis. Ex, nobis nisi in beatae quam rerum itaque ipsum adipisci deleniti voluptates, harum dolor unde magnam, aspernatur ipsam tempore commodi dolorem impedit. Beatae porro tempora labore.
+            </p>
         </div>
-        <button class="button-selengkapnya" onclick="toggle_popup()">Kembali</button>
+        <div class="content-button">
+
+            <button class="button-selengkapnya" onclick="toggle_popup()">Kembali</button>
+
+
+            <a href="#">
+                <button class="button-quiz">Quiz</button>
+            </a>
+        </div>
     </div>
 
-    <!-- pagination -->
-    <!-- <div class="container-pagination-luar">
-        <div class="pagination">
-            <ul>
-                <li class="btn prev"><span><i class="fas fa-angle-left"></i> Prev</span></li>
-                        <li class="numb active"><span>1</span></li>
-                        <li class="numb"><span>2</span></li>
-                        <li class="dots"><span>...</span></li>
-                        <li class="numb"><span>4</span></li>
-                        <li class="numb"><span>5</span></li>
-                        <li class="dots"><span>...</span></li>
-                        <li class="numb"><span>7</span></li>
-                        <li class="btn next"><span>Next <i class="fas fa-angle-right"></i></span></li> 
-            </ul>
-        </div>
-    </div> -->
 
-
-    <!-- Navbar -->
+    <!-- Navbar Bawah -->
     <nav class="navbar navbar-expand navbar-dark bg-primary text-white fixed-bottom">
         <ul class="navbar-nav nav-justified w-100 ">
             <li class="nav-item">
-                <a href="../../HTML/Project-HTML/Beranda.html" class="nav-link">
+                <a href="../Project-HTML/Beranda.html" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-house" viewBox="0 0 16 16" alt="Beranda">
                         <path
@@ -255,7 +214,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="../../HTML/Project-HTML/Berita.html" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-newspaper" viewBox="0 0 16 16" alt="Berita">
                         <path
@@ -278,7 +237,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="../Project-HTML/edu.html" class="nav-link">
+                <a href="#" class="nav-link active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-book" viewBox="0 0 16 16" alt="Edukasi">
                         <path
@@ -302,16 +261,14 @@
         </ul>
     </nav>
 
-
-    <script type="text/javascript" src="../../JS/Template/scrolltopbtn.js"></script>
     <script type="text/javascript">
         function toggle_popup() {
             var popup = document.getElementById('popup')
             popup.classList.toggle('active')
         }
     </script>
-
 </body>
-<!-- <script src="../../JS/Template/pagination.js"></script> -->
+<!-- script in html -->
+<!-- <script type="text/javascript" src="../../JS/Template/scrolltopbtn.js"></script> -->
 
 </html>
