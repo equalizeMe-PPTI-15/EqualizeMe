@@ -34,10 +34,16 @@
 <body>
     <div class="container">
         <h1>Registrasi</h1>
-        <form action="action.php" method="post">
+        <form action="/register" method="post">
+        @csrf
     <div class="form-group">   
-    <label for="nama">Nama Lengkap</label> 
-    <input type="text" class="form-control" id="nama" name="nama" required>
+    <label for="name">Nama Lengkap</label> 
+    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required value="{{ old('name') }}">
+        @error('name')
+      <div class="invalid-feedback">
+       {{ $message }}
+      </div>
+      @enderror
           </div>
     
           
@@ -45,8 +51,12 @@
     
             
     <label for="nik">NIK</label> 
-    <input type="number" class="form-control" id="nik" name="nik" required>
-    
+    <input type="number" class="form-control @error('nik') is-invalid @enderror" id="nik" name="nik" required value="{{ old('nik') }}">
+        @error('nik')
+      <div class="invalid-feedback">
+        {{ $message }}
+      </div>
+      @enderror
           
     </div>
     
@@ -54,32 +64,56 @@
     <div class="form-group">
     
             
-    <label for="telp">No. Telp</label>
-    <input type="number" class="form-control" id="telp" name="telp" required>
-    
+    <label for="phoneNumber">No. telp</label>
+    <input type="number" class="form-control @error('phoneNumber') is-invalid @enderror" id="phoneNumber" name="phoneNumber" required value="{{ old('phoneNumber') }}">
+        @error('phoneNumber')
+      <div class="invalid-feedback">
+        {{ $message }}
+      </div>
+      @enderror
           
     </div>
           
     <div class="form-group">   
     <label for="email">Email</label> 
-    <input type="email" class="form-control" id="email" name="email" required>
-          
+    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" required value="{{ old('email') }}">
+    @error('email')
+      <div class="invalid-feedback">
+        {{ $message }}
+      </div>
+      @enderror
     </div>
     
           
     <div class="form-group">
     
             
-    <label for="alamat">Alamat</label>
-    
-            
-    <textarea class="form-control" id="alamat" name="alamat" required></textarea>    
+    <label for="address">Alamat</label>
+    <textarea class="form-control @error('address') is-invalid @enderror" id="address" name="address" required>
+        {{ trim(htmlspecialchars(old('address', ''))) }}
+    </textarea>
+
+
+
+
+    @error('address')
+      <div class="invalid-feedback">
+        {{ $message }}
+      </div>
+      @enderror
     </div>
+
     <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" name="password" required>
+    <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required>
+    @error('password')
+      <div class="invalid-feedback">
+        {{ $message }}
+      </div>
+      @enderror
     </div>
-    <button type="submit" class="btn btn-primary">Daftar</button>
+
+    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
         </form>
         <div class="divKata">
             <a class="kata">Sudah punya akun? </a>

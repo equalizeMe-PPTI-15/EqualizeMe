@@ -1,10 +1,10 @@
 
-#blur.active{
+.blur.active{
     filter: blur(1px);
     pointer-events: none;
     user-select: none;
 }
-#popup button{
+.popup button{
     position: relative;
     padding: 5px 20px;
     display: inline-block;
@@ -47,7 +47,7 @@
     color: #111;
     text-align: justify;
 }
-#popup{
+.popup{
     position: fixed;
     /* top: 100; */
     bottom: 0;
@@ -69,7 +69,7 @@
     transition: 0.5s;
     /* border: solid red; */
 }
-#popup.active{
+.popup.active{
     z-index: 999;
     border-radius: 5% 5% 0 0;
     bottom: 49.5%;
@@ -87,12 +87,13 @@
 
 /* popup */
 
-#blur.active{
+.blur.active{
     filter: blur(1px);
     pointer-events: none;
     user-select: none;
 }
-#popup-edu button{
+
+.popup-edu button{
     position: relative;
     padding: 5px 20px;
     display: inline-block;
@@ -136,7 +137,7 @@
     color: #111;
     text-align: justify;
 }
-#popup-edu{
+.popup-edu{
     position: fixed;
     /* top: 100; */
     bottom: 0;
@@ -158,7 +159,8 @@
     transition: 0.5s;
     /* border: solid red; */
 }
-#popup-edu.active{
+
+.popup-edu.active{
     z-index: 999;
     border-radius: 5% 5% 0 0;
     bottom: 49.5%;
