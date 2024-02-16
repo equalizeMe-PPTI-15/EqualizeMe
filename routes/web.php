@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsEduController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,5 @@ Route::get('/home', [NewsEduController::class, 'index']);
 Route::get('/berita', function () {
     return view('berita');
 });
+
+Route::get('/pengaduan', [ReportController::class, 'index']);
