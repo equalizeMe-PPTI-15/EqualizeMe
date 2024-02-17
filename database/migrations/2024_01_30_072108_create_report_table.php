@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('report', function (Blueprint $table) {
+        Schema::create('reports', function (Blueprint $table) {
             $table->id('idReport');
-            $table->string('victimName');
-            $table->integer('phoneNumber');
             $table->string('incidentAddress');
+            $table->date('dateOfIncident');
             $table->string('description');
-            $table->string('proof');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            // $table->integer('picture / video') ??? masih gatau caranya ntar ae;
         });
     }
 

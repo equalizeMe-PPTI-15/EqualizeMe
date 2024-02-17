@@ -30,6 +30,11 @@
 </head>
 <body>
     <!-- content -->
+    @if(session()->has('reported'))
+    <div class="alert alert-success alert-disissible fade show" role="alert">
+        {{ session('reported') }}
+    </div>
+    @endif
     <div class="container-content-pengaduan">
         <div class="container-upload-file">
             <label for="input-file" id="drop-area">
@@ -41,21 +46,38 @@
             </label>
         </div>
         <div class="container-form-pengaduan">
-            <form action="" method="post" class="form-pengaduan">
+            <form action="/pengaduan" method="post" class="form-pengaduan">
+                @csrf
                 <!-- <h1 class="title-pengaduan">Pengaduan</h1> -->
                 <div class="form-group">
                     <!-- <label for="nama"></label> -->
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Tempat Kejadian">
+                    <input type="text" class="form-control" id="nama" name="incidentAddress" placeholder="Tempat Kejadian" required>
+                    @error('incidentAddress')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
                     <!-- <label for=""></label> -->
-                    <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Waktu Kejadian">
+                    <input type="date" class="form-control" id="tanggal" name="dateOfIncident" placeholder="Waktu Kejadian" required>
+                    @error('dateOfIncident')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
                     <!-- <input type="text" class="form-control" id="tanggal" name="tanggal" placeholder="Waktu Kejadian"> -->
                     <!-- <input type="text" class="form-control" id="deskripsi" name="deskripsi"  placeholder="Deskripsi / Penjelasan Kejadian"> -->
-                    <textarea name="deskripsi" id="deskripsi" placeholder="Deskripsi / Penjelasan Kejadian" cols="30" rows="10"></textarea>
+                    <textarea name="description" id="deskripsi" placeholder="Deskripsi / Penjelasan Kejadian" cols="30" rows="10" required></textarea>
+                    @error('description')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
                 <!-- button -->
                 <div class="container-button-pengaduan">
                     <button type="submit" class="button-kirim">Kirim</button>
                 </div>
+            </form>
         </div>
     </div>
 

@@ -47,3 +47,4 @@ Route::get('/berita', function () {
 });
 
 Route::get('/pengaduan', [ReportController::class, 'index']);
+Route::post('/pengaduan', [ReportController::class, 'store']);
