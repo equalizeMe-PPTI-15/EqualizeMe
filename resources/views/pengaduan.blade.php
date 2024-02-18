@@ -33,6 +33,7 @@
     @if(session()->has('reported'))
     <div class="alert alert-success alert-disissible fade show" role="alert">
         {{ session('reported') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
     <div class="container-content-pengaduan">
@@ -75,7 +76,7 @@
                 </div>
                 <!-- button -->
                 <div class="container-button-pengaduan">
-                    <button type="submit" class="button-kirim">Kirim</button>
+                    <button type="submit" class="button-kirim mt-0">Kirim</button>
                 </div>
             </form>
         </div>
