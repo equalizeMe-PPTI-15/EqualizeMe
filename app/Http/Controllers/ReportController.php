@@ -28,7 +28,7 @@ class ReportController extends Controller
 
         Report::create($validatedData);
 
-        $request->session()->flash('reported', 'Thank you for your report.. we will review it ASAP.');
+        $request->session()->flash('reported', 'Thank you for your report. We will review it.');
 
         return redirect('/pengaduan');
     }

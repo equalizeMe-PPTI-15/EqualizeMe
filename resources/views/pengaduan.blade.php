@@ -31,7 +31,7 @@
 <body>
     <!-- content -->
     @if(session()->has('reported'))
-    <div class="alert alert-success alert-disissible fade show" role="alert">
+    <div class="alert alert-success alert-disissible fade show" role="alert" id="msgAlert">
         {{ session('reported') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
@@ -42,30 +42,30 @@
         <div class="container-content-pengaduan">
             <div class="container-upload-file">
                 <label for="input-file" id="drop-area">
-                    <input type="file" id="input-file" class="form-control @error('input-file') is-invalid @enderror" accept="image/*, video/*" name="input-file" hidden required>
+                    <input type="file" id="input-file" class="form-control @error('input-file') is-invalid @enderror" accept="image/*, video/*" name="input-file" hidden value= "{{ old('input-file') }}">
                     <div id="img-view">
                         <p>Drag atau Masukkan<br> Image/Video</p>
                         <!-- <span>upload any images from desktop</span> -->
                     </div>
                     @error('input-file')
-                    <div class="invalid-feedback">
+                    <div class="invalid-feedback mt-3">
                         {{ $message }}
                     </div>
                     @enderror
                 </label>
             </div>
-            <div class="container-form-pengaduan mt-2">
+            <div class="container-form-pengaduan">
                 <!-- <h1 class="title-pengaduan">Pengaduan</h1> -->
-                <div class="form-group">
+                <div class="form-group mt-4">
                     <!-- <label for="nama"></label> -->
-                    <input type="text" class="form-control" id="nama" name="incidentAddress" placeholder="Tempat Kejadian" required>
+                    <input type="text" class="form-control" id="nama" name="incidentAddress" placeholder="Tempat Kejadian" required value="{{ old('incidentAddress') }}">
                     @error('incidentAddress')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
                     @enderror
                     <!-- <label for=""></label> -->
-                    <input type="date" class="form-control" id="tanggal" name="dateOfIncident" placeholder="Waktu Kejadian" required>
+                    <input type="date" class="form-control" id="tanggal" name="dateOfIncident" placeholder="Waktu Kejadian" required value="{{ old('dateOfIncident') }}">
                     @error('dateOfIncident')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -73,7 +73,7 @@
                     @enderror
                     <!-- <input type="text" class="form-control" id="tanggal" name="tanggal" placeholder="Waktu Kejadian"> -->
                     <!-- <input type="text" class="form-control" id="deskripsi" name="deskripsi"  placeholder="Deskripsi / Penjelasan Kejadian"> -->
-                    <textarea name="description" id="deskripsi" placeholder="Deskripsi / Penjelasan Kejadian" cols="30" rows="10" required></textarea>
+                    <textarea name="description" id="deskripsi" placeholder="Deskripsi / Penjelasan Kejadian" cols="30" rows="10" required value="{{ old('description') }}"></textarea>
                     @error('description')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -82,7 +82,7 @@
                 </div>
                 <!-- button -->
                 <div class="container-button-pengaduan">
-                    <button type="submit" class="button-kirim mt-0">Kirim</button>
+                    <button type="submit" class="button-kirim mt-0" onclick="restoreValue()">Kirim</button>
                 </div>
             </div>
         </div>
