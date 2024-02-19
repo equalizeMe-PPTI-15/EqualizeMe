@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id('idReport');
+            $table->string('input-file');
             $table->string('incidentAddress');
             $table->date('dateOfIncident');
             $table->string('description');

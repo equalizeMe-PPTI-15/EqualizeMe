@@ -14,14 +14,17 @@ class ReportController extends Controller
     }
 
     public function store (Request $request) {
+
         $validatedData = $request->validate([
+            'input-file' => 'required|file|mimes:jpeg,jpg,png,gif,mp4,mp3,mov,avi|min:1',
             'incidentAddress' => 'required|max:255',
             'dateOfIncident' => 'required|date',
             'description' => 'required|min:8|max:255'
             // 'created_at' => 'exclude',
             // 'updated_at' => 'exclude'
-            // 'gambar hehe gatau ntar ae'
         ]);
+
+        $validatedData['input-file'] = $request->file('input-file')->store('file_pengaduan'); 
 
         Report::create($validatedData);
 

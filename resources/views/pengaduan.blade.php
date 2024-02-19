@@ -36,19 +36,25 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
-    <div class="container-content-pengaduan">
-        <div class="container-upload-file">
-            <label for="input-file" id="drop-area">
-                <input type="file" id="input-file" class="input-file" accept="image/*, video/*" hidden>
-                <div id="img-view">
-                    <p>Drag atau Masukkan<br> Image/Video</p>
-                    <!-- <span>upload any images from desktop</span> -->
-                </div>
-            </label>
-        </div>
-        <div class="container-form-pengaduan">
-            <form action="/pengaduan" method="post" class="form-pengaduan">
-                @csrf
+
+    <form action="/pengaduan" method="post" enctype="multipart/form-data">
+        @csrf
+        <div class="container-content-pengaduan">
+            <div class="container-upload-file">
+                <label for="input-file" id="drop-area">
+                    <input type="file" id="input-file" class="form-control @error('input-file') is-invalid @enderror" accept="image/*, video/*" name="input-file" hidden required>
+                    <div id="img-view">
+                        <p>Drag atau Masukkan<br> Image/Video</p>
+                        <!-- <span>upload any images from desktop</span> -->
+                    </div>
+                    @error('input-file')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </label>
+            </div>
+            <div class="container-form-pengaduan">
                 <!-- <h1 class="title-pengaduan">Pengaduan</h1> -->
                 <div class="form-group">
                     <!-- <label for="nama"></label> -->
@@ -78,10 +84,9 @@
                 <div class="container-button-pengaduan">
                     <button type="submit" class="button-kirim mt-0">Kirim</button>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
-
+    </form>    
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand navbar-dark bg-primary text-white fixed-bottom">
