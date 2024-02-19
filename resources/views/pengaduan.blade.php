@@ -48,13 +48,13 @@
                         <!-- <span>upload any images from desktop</span> -->
                     </div>
                     @error('input-file')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
                     @enderror
                 </label>
             </div>
-            <div class="container-form-pengaduan">
+            <div class="container-form-pengaduan mt-2">
                 <!-- <h1 class="title-pengaduan">Pengaduan</h1> -->
                 <div class="form-group">
                     <!-- <label for="nama"></label> -->

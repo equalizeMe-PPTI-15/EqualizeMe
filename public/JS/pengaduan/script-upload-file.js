@@ -73,10 +73,13 @@ function uploadImage(){
 
 function uploadVideo(){
     let videoLink = URL.createObjectURL(inputFile.files[0]);
-    contentView.innerHTML = `<video style="width:100%; background-position:center; background-size:cover;" src="${videoLink}" controls></video>`;
+    contentView.innerHTML = `<video style="width:100%; background-position:center; background-size:cover; height:100%;" src="${videoLink}" controls></video>`;
     contentView.style.backgroundImage = "";
     // contentView.style.backgroundSize = "cover";
     // contentView.style.backgroundPosition = "center";
     // contentView.style.backgroundRepeat = "no-repeat";
     contentView.style.border = 0;
 }
+
+// `<video style="width:100%; background-position:center; background-size:cover; height:100%;" src="${videoLink}" controls></video>`;
+
