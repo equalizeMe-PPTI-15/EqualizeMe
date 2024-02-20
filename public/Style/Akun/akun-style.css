@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.icon-back-container{
+    /* border: solid blue; */
+    height: 7vh;
+    display: flex;
+    justify-content: start;
+}
+.temp-icon{
+    /* border: solid green; */
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.temp-icon i{
+    font-size: 1.5em;
+    color: #000;
+    
+}
+
+.container-akun{
+    /* border: solid red; */
+    height: 114vh;
+}
+.content-img-akun{
+    /* border: solid blue; */
+    height: 31vh;
+    max-height: 31vh;
+    display: flex;
+    margin-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+}
+#drop-area-img{
+    /* border: solid red; */
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 30vh;
+    max-width: 100%;
+    align-items: center;
+    border-radius: 50%;
+}
+.border-template{
+    /* border: solid indigo; */
+    border-radius: 49%;
+    height: 30vh;
+    max-height: 30vh;
+    width: 100%;
+    overflow: hidden;
+    /* transform: translateY(50%); */
+    /* height: 35vh; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.content-img-akun img{
+    /* color: #000; */
+    /* background-color: #000; */
+    width: 100%;
+    height: 100%;
+    /* background-size: cover; */
+    object-fit: cover;
+
+}
+
+.container-form{
+    /* border: solid green; */
+    height: 83vh;
+    max-height: 83vh;
+}
+.content-form{
+    /* border: solid black; */
+    height: 83vh;
+    max-height: 83vh;
+    width: 100%;
+    /* padding: 5% 0; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.content-form form{
+    /* border: solid red; */
+    width: 90%;
+    height: 82vh;
+    max-height: 82vh;
+    font-weight: 600;
+}
+.content-form input{
+    border:1px solid grey;
+    /* width: 90%; */
+    /* margin-top: 100%; */
+    /* margin-bottom: 9%; */
+    padding: 2%;
+    width: 100%;
+    height: 7vh;
+    margin: 0;
+}
+
+.content-form label img{
+    width: 5.5%;
+    position: relative;
+    /* top: 0; */
+    bottom: 2px;
+}

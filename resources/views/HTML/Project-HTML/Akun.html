@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akun</title>
+    <!-- bootstrap -->
+    <link href="../../Style/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        
+        
+    <link rel="stylesheet" href="../../Style/Akun/akun-style.css">
+
+    <link rel="website icon" type="png" href="../../Image/logo.jpg">
+
+</head>
+
+<body>
+    <div class="icon-back-container w-100">
+        <!-- create back like -> -->
+        <div class="temp-icon">
+            <a href="../../HTML/Project-HTML/Beranda.html" class="icon-back">
+                <i class="fa fa-arrow-left"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- content akun -->
+    <div class="container-akun w-100">
+        <div class="content-img-akun w-100">
+            <label for="input-file-img" id="drop-area-img">
+                <!-- nanti di dalam input bisa ditambahin function value -->
+                <input type="file" accept="image/*" id="input-file-img" value="" hidden>
+                <div class="border-template">
+                    <img src="../../Image/akunnnn.png" alt="image-akun">
+                </div>
+            </label>
+        </div>
+        <div class="container-form">
+            <div class="content-form">
+                <form class="dflex" action="/action_page.php">
+                    <label for="fname">Nama Lengkap</label>
+                    <input type="text" id="fname" name="fname" value="ayam rambo" disabled>
+                    <br>
+                    <br>
+                    <label for="nik">NIK</label>
+                    <input type="text" id="nik" name="nik" value="9999921321" disabled>
+                    <br>
+                    <br>
+                    <label for="notelp" class="label-form " disabled >No. Telp
+                        <img src="../../Image/edit_pencil_icon_143022.png" alt="image">
+                    </label>
+                    <input autocomplete="off" type="text" id="notelp" name="notelp" value="0812345679031" placeholder="08XXXXXXXXXXX" disabled>
+                    <br>
+                    <br>
+                    <label for="alamat" class="label-form" disabled>Alamat
+                        <img src="../../Image/edit_pencil_icon_143022.png" alt="image" >
+                    </label>
+                    <input type="text" id="alamat" name="alamat" value="jl.rumah ayam rt 00 rw 00" disabled>
+                    <br>
+                    <br>
+                    <label for="email" class="label-form" disabled>Email
+                        <img src="../../Image/edit_pencil_icon_143022.png" alt="image" >
+                    </label>
+                    <input type="text" id="email" name="email" placeholder="@gmail.com">
+                    <br>
+                    <br>
+                    <label for="password" class="label-form" disabled>Password
+                        <img src="../../Image/edit_pencil_icon_143022.png" alt="image">
+                    </label>
+                    <input autocomplete="off" type="password" id="password" name="password" value="9999921321" disabled>
+                    <br>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var notelp = document.getElementById('notelp');
+        notelp.addEventListener('input', function () {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 13) {
+                this.value = this.value.slice(0, 13);
+            }
+        });
+        var email = document.getElementById('email');
+        email.addEventListener('input', function () {
+            this.value = this.value.replace(/[^a-zA-Z0-9@.]/g, '');
+        });
+        var password = document.getElementById('password');
+        password.addEventListener('input', function () {
+            this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');
+            if (this.value.length > 32) {
+                this.value = this.value.slice(0, 32);
+            }
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(".label-form img").click(function () {
+                let name = $(this).parent().attr('for');
+                $(`input[name=${name}]`).removeAttr('disabled');
+                $(`input[name=${name}]`).focus();
+            });
+
+            $(".label-form img").dblclick(function () {
+                let name = $(this).parent().attr('for');
+                $(`input[name=${name}]`).attr('disabled', 'disabled');
+            });
+
+            $("input").blur(function () {
+                $(this).attr('disabled', 'disabled');
+            });
+
+            $("input").keypress(function (e) {
+                if (e.which === 13) {
+                    $("input").attr('disabled', 'disabled');
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
