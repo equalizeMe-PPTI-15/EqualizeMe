@@ -112,7 +112,31 @@
         </ul>
     </nav>
 
-    <script type="text/javascript" src="/JS/helpme.js"></script>
+    <!-- <script type="text/javascript" src="/JS/helpme.js"></script> -->
     <script type="text/javascript" src="/JS/Template/scrolltopbtn.js"></script>
+
+    <!-- ini script js buat play sound -->
+    <script>
+    const audioElements = [
+        @foreach ($lokasi as $index => $path)
+            { src: "{{ $path }}", id: "audio-element-{{ $index }}" },
+        @endforeach
+    ];
+
+    let audioIndex = 0;
+    const playButton = document.getElementById("play-button");
+
+    playButton.addEventListener("click", () => {
+        const audioElement = document.getElementById(audioElements[audioIndex].id);
+
+        if (audioElement.paused || audioElement.ended) {
+            audioElement.play();
+            audioIndex++;
+            if (audioIndex >= audioElements.length) {
+                audioIndex = 0;
+            }
+        }
+    });
+</script>
 </body>
 </html>
