@@ -19,7 +19,6 @@
 }
 .popup img, .popup iframe, .popup video{
     width: 100%;
-    margin-bottom: 5%;
     border-radius: 2%;
     /* border: solid blue; */
 }
@@ -40,6 +39,9 @@
     color: #111;
     overflow: auto;
 }
+.content-text-popup video{
+    width: 100%;
+}
 .popup h2{
     font-size: 16px;
     font-weight: bold;
@@ -50,7 +52,7 @@
     color: #111;
     text-align: justify;
 }
-#popup{
+.popup_edu{
     position: fixed;
     /* top: 100; */
     bottom: 0;
@@ -72,7 +74,7 @@
     transition: 0.5s;
     /* border: solid red; */
 }
-#popup.active{
+.popup_edu.active{
     z-index: 999;
     border-radius: 5% 5% 0 0;
     bottom: 49.5%;
@@ -91,7 +93,7 @@
     /* border: solid red; */
     display: flex;  
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
 }
 
 
@@ -99,14 +101,15 @@
     border: none;
     font-size: 16px;
     color: #fff;
-    padding: 8px 16px;
+    padding: 5px 20px;
     background-color: rgb(101, 202, 209);
     border-radius:6px;
     /* margin: 14px; */
-    border: .1px solid grey;
+    border: .1px solid black;
     /* border: .1px solid red; */
     cursor: pointer;
     transition: all 0.3s ease;
+    background: #03848F;
 }
 .button-kembali:hover{
     background: #CDF0F3;

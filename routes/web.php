@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsEduController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\EducationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,12 +36,14 @@ Route::get('/helpme', function () {
     return view('helpme');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+// Route::get('/home', function () {
+//     return view('home');
+// });
 
 Route::get('/home', [NewsEduController::class, 'index']);
 
 Route::get('/berita', function () {
     return view('berita');
 });
+
+Route::get('/education', [EducationController::class, 'index']);

@@ -252,7 +252,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="../Project-HTML/edu.html" class="nav-link">
+                <a href="/education" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-book" viewBox="0 0 16 16" alt="Edukasi">
                         <path
