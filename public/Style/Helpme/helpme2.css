@@ -1,0 +1,65 @@
+.back{
+    position: relative;
+    /* border: solid red; */
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.buttonback{
+    /* border: solid blue; */
+    width: 50px;
+    align-items: left;
+    text-align: center;
+}
+
+.judul{
+    /* border: solid red; */
+    margin: 0 auto;
+    height: auto;
+    width: 90%;
+    align-items: center;
+}
+
+.judul p{
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.hr_class{
+    width: 90%;
+    /* border: solid grey; */
+    opacity: 0.8;
+    margin: 0 auto;
+}
+
+.containerDialog{
+    /* border: solid salmon; */
+    width: 90%;
+    margin: 0 auto;
+}
+
+.judulDialog{
+    /* border: solid green; */
+    width: fit-content;
+    /* margin-left: 10px; */
+}
+
+.playbutton{
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    /* border: solid red; */
+}
+
+.playbutton img{
+    width: 50%;
+    height: 50%;
+    margin-bottom: 20%;
+}
+
+.playbutton:active{
+    transform: scale(1.5);
+    opacity: 0.8;
+}
+
