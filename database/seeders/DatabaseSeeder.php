@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Dialog;
 use App\Models\User;
 use App\Models\News;
 use App\Models\Education;
@@ -21,6 +22,23 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        Dialog::create([
+            'judul' => 'Percakapan saat berada di taksi online',
+            'isi'=> '<p>EqualizeMe : "Eh, lagi dimana? Kok lama sih"</p><p>User :</p><p>EqualizeMe:"Oh, lagi di jalan? Di daerah mana itu?"</p><p>User :</p><p>EqualizeMe : "Udah kirim share lokasi? Oh di sana, oke aman-aman, aku udah nunggu di depan nih ya"</p>',
+            'lokasi'=> '/Sound/taksi/Recording.m4a + /Sound/taksi/Recording(2).m4a + /Sound/taksi/Recording(3).m4a'
+        ]);
+
+        Dialog::create([
+            'judul'=> 'Percakapan saat sedang berjalan dan diikuti orang',
+            'isi'=> '<p>EqualizeMe : "Eh, kamu dimana? udah di daerah rumah aku belom?"</p><p>User :</p><p>EqualizeMe : "Oh, udah deket itu mah, jalan aja dikit lagi"</p><p>User :</p><p>EqualizeMe : "Iya, aku udah di depan jalan nih"</p><p>User :</p> <p>EqualizeMe : "Oke, udah sampe ya? Belok kanan aja"</p><p>User :</p>',
+            'lokasi'=> '/Sound/jalan/Recording.m4a + /Sound/jalan/Recording(2).m4a + /Sound/jalan/Recording(3).m4a + /Sound/jalan/Recording(4).m4a',
+        ]);
+
+        Dialog::create([
+            'judul'=> 'Percakapan saat sedang sendirian di tempat sepi dan ada orang yang mencurigakan',
+            'isi'=> '<p>EqualizeMe : "Eh, kamu dimana? Aku udah sampe nih"</p><p>User :</p> <p>EqualizeMe : "Oh, di sana, kamu bisa ke tempat aku aja gak? Deket kok ini, ada barang bawaan nih"</p><p>User :</p> <p>EqualizeMe : "Oke, cepetan ya, ada yang lain juga nih ramean"</p><p>User :</p>',
+            'lokasi'=> '/Sound/sepi/Recording.m4a + /Sound/sepi/Recording(2).m4a + /Sound/sepi/Recording(3).m4a'
+        ]);
 
         User::create([
             'name' => 'Shandez Darlene',
