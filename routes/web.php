@@ -39,7 +39,7 @@ Route::get('/helpme', function () {
     return view('helpme');
 });
 
-Route::get('/home', [HomeController::class, 'index'])->name('coba');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 // Route::get('/home', [NewsEduController::class, 'index'])->name('home');
 

@@ -20,7 +20,7 @@ class LoginController extends Controller
             
             $user = Auth::user();
 
-            return redirect()->intended('/home', $user);
+            return redirect()->intended('/home');
         }
         
         return back()->with('loginError', 'wrong input nik or password!');

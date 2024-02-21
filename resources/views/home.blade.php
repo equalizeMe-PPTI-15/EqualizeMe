@@ -80,9 +80,9 @@
                         <span> Hi, user! </span>
                     </div>
                 </li>                
-
                 @endguest
-                {{-- @auth
+                
+                <!-- {{-- @auth
                 <li>
                     <div class="nav-inner-span">
                         @section('content')
@@ -96,7 +96,7 @@
                         <span> Hi, user! </span>
                     </div>
                 </li>
-                @endauth --}}
+                @endauth --}} -->
             </div>
         </div>
         <div class="nav-inner-right">
