@@ -65,11 +65,38 @@
                         </a>
                     </div>
                 </li>
+                @auth
                 <li>
                     <div class="nav-inner-span">
-                        <span>Hi, name</span>
+                        @section('content')
+                        <span> Hi, {{ Auth::user()->name }} </span>
                     </div>
                 </li>
+                @endauth
+                @guest
+                <li>
+                    <div class="nav-inner-span">
+                        @section('content')
+                        <span> Hi, user! </span>
+                    </div>
+                </li>                
+
+                @endguest
+                {{-- @auth
+                <li>
+                    <div class="nav-inner-span">
+                        @section('content')
+                        <span> Hi, {{auth()->user()->name }} </span>
+                    </div>
+                </li>
+                @else
+                <li>
+                    <div class="nav-inner-span">
+                        @section('content')
+                        <span> Hi, user! </span>
+                    </div>
+                </li>
+                @endauth --}}
             </div>
         </div>
         <div class="nav-inner-right">

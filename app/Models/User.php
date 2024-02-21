@@ -17,14 +17,14 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    // protected $fillable = [
-    //     'name',
-    //     'email',
-    //     'password',
-    //     'nik',
-    //     'address',
-    //     'phonenumber',
-    // ];
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'nik',
+        'address',
+        'phonenumber',
+    ];
 
     protected $guarded = ['id'];
     
@@ -49,4 +49,6 @@ class User extends Authenticatable
         'updated_at' => 'datetime',
         'created_at' => 'datetime',
     ];
+
+
 }
