@@ -46,5 +46,9 @@ Route::get('/berita', function () {
     return view('berita');
 });
 
+Route::get('/sandi', function(){
+    return view('sandi');
+});
+
 Route::get('/helpme', [DialogController::class,'index']);
 Route::get('/helpme2/{dialog}', [DialogController::class,'show']);
