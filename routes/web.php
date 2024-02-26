@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\DialogController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AkunController;
+use App\Http\Controllers\DialogController;
 use App\Http\Controllers\NewsEduController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\EducationController;
@@ -48,5 +49,10 @@ Route::get('/berita', function () {
 });
 
 Route::get('/education', [EducationController::class, 'index']);
+
 Route::get('/helpme', [DialogController::class,'index']);
 Route::get('/helpme2/{dialog}', [DialogController::class,'show']);
+
+Route::get('/akun', [AkunController::class, 'index']);
+Route::post('/akun/{user}', [AkunController::class, 'store']);
+// Route::get('/akun/{user}', [AkunController::class, 'saveAkun']);

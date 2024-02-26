@@ -24,11 +24,11 @@
 }
 
 .container-akun{
-    /* border: solid red; */
+    border: solid red;
     height: 114vh;
 }
 .content-img-akun{
-    /* border: solid blue; */
+    border: solid blue;
     height: 31vh;
     max-height: 31vh;
     display: flex;
@@ -37,7 +37,7 @@
     align-items: center;
 }
 #drop-area-img{
-    /* border: solid red; */
+    border: solid green;
     display: flex;
     justify-content: center;
     width: 50%;
@@ -47,7 +47,7 @@
     border-radius: 50%;
 }
 .border-template{
-    /* border: solid indigo; */
+    border: solid red;
     border-radius: 49%;
     height: 30vh;
     max-height: 30vh;
