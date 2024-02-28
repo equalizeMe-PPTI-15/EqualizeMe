@@ -33,20 +33,18 @@
 <body>
 <div class="container">
     <h1>Login</h1>
-    <form action="/home/{{ $akuns->id }}" method="post" >
-    @csrf
-<div class="form-group">
-
-        
-<label for="nik">NIK</label> 
-<input type="number" class="form-control" id="nik" name="nik" required>          
-</div>
-          
-<div class="form-group">
-<label for="password">Password</label>
-<input type="password" class="form-control" id="password" name="password" required>
-</div>
-<button type="submit" class="btn btn-primary">Login</button>
+    <form method="post" action="/home/{{ $akuns->id }}">
+        @csrf
+        <div class="form-group">
+        <label for="nik">NIK</label> 
+        <input type="number" class="form-control" id="nik" name="nik" required>          
+        </div>
+                
+        <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
     </form>
     <div class="divKata">
         <a class="kata">Tidak punya akun? </a>
