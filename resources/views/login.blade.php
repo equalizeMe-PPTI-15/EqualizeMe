@@ -33,8 +33,8 @@
 <body>
 <div class="container">
     <h1>Login</h1>
-    <form action="action.php" method="post">
-      
+    <form action="/home/{{ $akuns->id }}" method="post" >
+    @csrf
 <div class="form-group">
 
         

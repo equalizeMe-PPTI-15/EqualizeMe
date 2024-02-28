@@ -42,6 +42,23 @@
         html {
             scroll-behavior: smooth;
         }
+
+        .btn-secondary {
+            --bs-btn-color: #fff;
+            --bs-btn-bg: #65CAD1;
+            --bs-btn-border-color: #65CAD1;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #57B2B8;
+            --bs-btn-hover-border-color: #65CAD1;
+            --bs-btn-focus-shadow-rgb: 130, 138, 145;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: #57B2B8;
+            --bs-btn-active-border-color: #65CAD1;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #fff;
+            --bs-btn-disabled-bg: #6c757d;
+            --bs-btn-disabled-border-color: #6c757d;
+        }
     </style>
 
     <link rel="website icon" type="png" href="../../Image/logo.jpg">
@@ -54,14 +71,26 @@
         <div class="nav-inner-left">
             <div class="dflex nav-content-inner">
                 <li>
-                    <div class="icon-profile">
-                        <a href="">
+                    <div class="dropdown" id="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
                                 class="bi bi-person-circle" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                                 <path fill-rule="evenodd"
                                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                             </svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/register">Register</a></li>
+                            <li><a class="dropdown-item" href="/login">Login</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <div id="profile" class="icon-profile-r" style="display: none;">
+                        <a href="../Project-HTML/Akun.html">
+                            <img src="../../Image/akun.png" alt="">
                         </a>
                     </div>
                 </li>
@@ -74,7 +103,7 @@
         </div>
         <div class="nav-inner-right">
             <div class="dflex nav-content-inner-right">
-                <li>
+                <!-- <li>
                     <div class="icon-profile-r">
                         <a href="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
@@ -84,7 +113,7 @@
                             </svg>
                         </a>
                     </div>
-                </li>
+                </li> -->
                 <li>
                     <div class="icon-profile-r">
                         <a href="">
@@ -155,7 +184,7 @@
                 </div>
                 <!-- <div class="swiper-button-next swipper-navBtn"></div>
                 <div class="swiper-button-prev swipper-navBtn"></div> -->
-                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-pagination"></div> -->
             </div>
 
 
@@ -202,7 +231,7 @@
                 </div>
                 <!-- <div class="swiper-button-next2 swipper-navBtn"></div>
                 <div class="swiper-button-prev2 swipper-navBtn"></div> -->
-                <div class="swiper-pagination2"></div>
+                <!-- <div class="swiper-pagination2"></div> -->
             </div>
             
             
@@ -244,8 +273,7 @@
                 <div class="nav-help">
                     <a href="#" class="nav-link" style=" padding-bottom:0;">
                         <div class="nav-helpme" style=" width: 100%; height: 100%; ">
-                            <img src="../../Image/helpme.png" width="70" height="40" alt="HelpMe"
-                                style="margin-top: 1%;">
+                            <img src="../../Image/helpme.png" width="70" height="40" alt="HelpMe" style="margin-top: 1%;">
                         </div>
                     </a>
 
@@ -342,9 +370,28 @@
         popup.classList.toggle('active')
     }
 </script>
+
+<!-- script register login -->
+<script>
+    @if ($akuns) 
+        var dropdown = document.getElementById('dropdown');
+        if (dropdown) {
+            dropdown.style.display = 'none';
+        }
+
+        var profile = document.getElementById('profile');
+        profile.style.display = 'block';
+    @endif
+
+    
+</script>
+
 <!-- swipper js -->
 <script src="../../JS/Template/carousel/swiper-bundle.min.js"></script>
 <script src="../../JS/Template/carousel/carousel.js"></script>
 <script src="../../JS/Template/carousel/carousell-edukasi-home.js"></script>
+
+<!-- Bootstrap JS and Popper.js are required for dropdown functionality -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
