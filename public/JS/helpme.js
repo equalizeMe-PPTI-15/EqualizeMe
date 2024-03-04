@@ -1,8 +1,9 @@
 let audioIndex = 0;
 const audioElements = [
   { src: "/Sound/Recording.m4a", id: "audio-element-0" },
-  { src: "/Sound/Recording (2).m4a", id: "audio-element-1" },
-  { src: "/Sound/Recording (3).m4a", id: "audio-element-2" }
+  { src: "/Sound/Recording(2).m4a", id: "audio-element-1" },
+  { src: "/Sound/Recording(3).m4a", id: "audio-element-2" },
+  { src: "/Sound/Recording(4).m4a", id: "audio-element-3" }
 ];
 const playButton = document.getElementById("play-button");
 
@@ -18,3 +19,4 @@ playButton.addEventListener("click", () => {
     }
   }
 });
+// script ini ga kepake

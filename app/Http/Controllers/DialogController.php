@@ -25,6 +25,7 @@ class DialogController extends Controller
     public function show(Dialog $dialog)
     {
         $lokasi = $this->formatString($dialog->lokasi);
+
         return view('helpme2',[
             'judul' => 'Single Dialog',
             'dialog' => $dialog,

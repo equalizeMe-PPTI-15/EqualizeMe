@@ -49,10 +49,16 @@ Route::get('/berita', function () {
 });
 
 Route::get('/education', [EducationController::class, 'index']);
+// Route::get('/sandi', function(){
+//     return view('sandi');
+// });
 
 Route::get('/helpme', [DialogController::class,'index']);
 Route::get('/helpme2/{dialog}', [DialogController::class,'show']);
 
 Route::get('/akun', [AkunController::class, 'index']);
 Route::post('/akun/{user}', [AkunController::class, 'store']);
-// Route::get('/akun/{user}', [AkunController::class, 'saveAkun']);
+Route::get('/akun/{user}', [AkunController::class, 'store']);
+
+Route::get('/sandi/{user}', [AkunController::class, 'index2']);
+Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
