@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DialogController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsEduController;
 use App\Http\Controllers\RegisterController;
@@ -48,3 +49,9 @@ Route::get('/berita', function () {
 
 Route::get('/pengaduan', [ReportController::class, 'index']);
 Route::post('/pengaduan', [ReportController::class, 'store']);
+Route::get('/sandi', function(){
+    return view('sandi');
+});
+
+Route::get('/helpme', [DialogController::class,'index']);
+Route::get('/helpme2/{dialog}', [DialogController::class,'show']);

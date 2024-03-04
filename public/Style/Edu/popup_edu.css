@@ -94,6 +94,26 @@
     align-items: center;
 }
 
+
+.button-kembali{
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: rgb(101, 202, 209);
+    border-radius:6px;
+    /* margin: 14px; */
+    border: .1px solid grey;
+    /* border: .1px solid red; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button-kembali:hover{
+    background: #CDF0F3;
+}
+
+
+
 .button-quiz{
     position: relative;
     /* float: right; */

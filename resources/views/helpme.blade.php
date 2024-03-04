@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Berita</title>
+    <title>Helpme</title>
 
     <!-- bootstrap -->
     <link href="Style/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -16,9 +16,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-    <!-- Wrapper -->
-    <link rel="stylesheet" href="Style/Berita/wrapper.css">
-    <link rel="stylesheet" href="Style/Berita/style_berita.css">
+    <link rel="stylesheet" href="Style/Helpme/helpme.css">
 
 
     <style>
@@ -36,101 +34,49 @@
 
 <body>
 
-    <!-- Pencarian -->
-    <div class="container-wrapper"
-        style="box-sizing: border-box; border: 1px solid rgba(12, 9, 9, 0.468); margin-bottom: 2vh;">
-        <div class="search_wrap search_wrap_2" style="border:0.2px solid grey; border-radius: 3px;">
-            <div class="search_box">
-                <div class="btn btn_common">
-                    <i class="fas fa-search"></i>
+   <!-- content untuk shortcut alarm -->
+   <div class="outter-banner-alarm dflex">
+        <div class="banner-alarm dflex">
+            <div class="logo-content-alarm dflex">
+                <div class="alarm-button dflex">
+                    <button id="btn" onclick="toggleAudio(); ">
+                        <span>Click Me!</span>
+                    </button>
+                    <script type="text/javascript" src="JS/sound.js">
+
+                    </script>
                 </div>
-                <input type="text" class="input" placeholder="Pencarian...">
+            </div>
+            <div class="text-content-alarm dflex">
+                <div class="text-h3-alarm">
+                    <h3>Alarm Bantuan!</h3>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- statistik -->
-    <div class="container-statistik">
-        <div class="banner-h3">
-            <h3>Statistik Presentase Pelecehan Seksual</h3>
+    <!-- isi helpme -->
+    <div class="dialog-container">
+    <div class="judul">
+            <p>Bantuan Rekaman Dialog</p>
         </div>
-        <div class="underlined-content">
-            <div class="garis-bawah"></div>
-        </div>
-        <div class="banner-img-statistik">
-            <img src="Image/412503.jpg" alt="">
-        </div>
+    @foreach ($dialogs as $dialog)
+    <article>
+    <div class="dialog-box">
+      <a href="/helpme2/{{$dialog->id}}" class="text-decoration-none"><p class="dialog-text">{{ $dialog->judul }}</p></a>
     </div>
-
-    <!-- content -->
-    <div class="container-content-berita">
-        <div class="h3-berita">
-            <h3>Berita</h3>
-        </div>
-        <div class="content-berita">
-            <a href="#">
-                <div class="beritanya">
-                    <img src="Image/412503.jpg" alt="">
-                    <div class="content-h6-berita">
-                        <h6>Judul Content Berita</h6>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-        <div class="content-berita">
-            <a href="#">
-                <div class="beritanya">
-                    <img src="Image/412503.jpg" alt="">
-                    <div class="content-h6-berita">
-                        <h6>Judul Content Berita</h6>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-        <div class="content-berita">
-            <a href="#">
-                <div class="beritanya">
-                    <img src="Image/412503.jpg" alt="">
-                    <div class="content-h6-berita">
-                        <h6>Judul Content Berita</h6>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-        <div class="content-berita">
-            <a href="#">
-                <div class="beritanya">
-                    <img src="Image/412503.jpg" alt="">
-                    <div class="content-h6-berita">
-                        <h6>Judul Content Berita</h6>
-                    </div>
-                </div>
-            </a>
-
-        </div>
+    </article>
+    @endforeach
+    <!-- <div class="dialog-box">
+      <p class="dialog-text">Percakapan saat berada di taksi online</p>
     </div>
-
-
-
-    <!-- pagination -->
-    <div class="container-pagination-luar">
-        <div class="pagination">
-            <ul>
-                <!-- <li class="btn prev"><span><i class="fas fa-angle-left"></i> Prev</span></li>
-                        <li class="numb active"><span>1</span></li>
-                        <li class="numb"><span>2</span></li>
-                        <li class="dots"><span>...</span></li>
-                        <li class="numb"><span>4</span></li>
-                        <li class="numb"><span>5</span></li>
-                        <li class="dots"><span>...</span></li>
-                        <li class="numb"><span>7</span></li>
-                        <li class="btn next"><span>Next <i class="fas fa-angle-right"></i></span></li> -->
-            </ul>
-        </div>
+    <div class="dialog-box">
+      <p class="dialog-text">Percakapan saat sedang berjalan dan diikuti orang</p>
     </div>
+    <div class="dialog-box">
+        <p class="dialog-text">Percakapan saat -</p>
+    </div> -->
+  </div>
 
 
     <!-- Navbar -->
@@ -147,7 +93,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="#" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-newspaper" viewBox="0 0 16 16" alt="Berita">
                         <path
@@ -199,5 +145,4 @@
 
 
 </body>
-    <script src="JS/Template/pagination.js"></script>
 </html>
