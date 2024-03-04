@@ -21,7 +21,7 @@ body{
 }
 
 .backnav{
-    border: solid black;
+    /* border: solid black; */
     width: 100%;
 }
 .nav-inner-left{
@@ -34,6 +34,7 @@ body{
 .nav-inner-left li, .nav-inner-right li{
     /* text-decoration: none; */
     list-style-type: none;
+    /* border: solid green; */
 }
 
 .dflex{
@@ -47,11 +48,15 @@ body{
 }
 .nav-inner-span{
     width: 100%;
-    margin-left: 15%;
-    margin-right: 10%;
     /* border: solid red; */
+    margin-left: 8%;
+    /* margin-right: 10%; */
+    /* border: solid red; */
+    text-transform: capitalize;
 }
 .nav-inner-span span{
+    /* width: ; */
+    /* border: solid blue; */
     color: white;
 }
 .icon-profile{
@@ -60,6 +65,7 @@ body{
     display: flex;
     /* margin-left: 10%;
     margin-right: 15%; */
+    /* margin-right: 100%; */
     /* align-items: center; */
 }
 .icon-profile a{
@@ -89,12 +95,28 @@ body{
     /* width: 100%; */
     margin: 8%;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
+.icon-profile{
+    /* border: solid blue; */
+    border-radius: 50%;
+    overflow:hidden;
+}
 
 .icon-profile-r a{
+    /* border: solid red; */
     color: white;
+    /* width: 100%; */
+}
+.icon-profile a img{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+    /* margin: 5px; */
+
 }
 .outter-banner-alarm{
     /* border: solid black; */
