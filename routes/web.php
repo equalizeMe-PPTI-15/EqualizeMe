@@ -32,18 +32,26 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'checkUser']);
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::get('/helpme', function () {
     return view('helpme');
 });
 
+<<<<<<< Updated upstream
+=======
+// Route::get('/home', [HomeController::class, 'index']);
+>>>>>>> Stashed changes
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 // Route::get('/home', [NewsEduController::class, 'index'])->name('home');
 
 // Route::resource('berita', BeritaController::class);
-Route::get('/berita', [BeritaController::class, 'index']);
+
 // Route::get('/berita/{news}', [BeritaController::class, 'show']);
+Route::get('/berita', [BeritaController::class, 'index']);
 Route::get('/berita/{id}/data', [BeritaController::class, 'getNewsData'])->name("news");
+// Route::get('/berita/{filtercarinews}', [BeritaController::class, 'searchNews']);
+
+// Route::get('/berita/search', [BeritaController::class, 'search']);

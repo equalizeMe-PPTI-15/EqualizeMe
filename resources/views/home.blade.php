@@ -68,15 +68,13 @@
                 @auth
                 <li>
                     <div class="nav-inner-span">
-                        @section('content')
-                        <span> Hi, {{ Auth::user()->name }} </span>
+                        <span> Hi, {{ auth()->user()->name }} </span>
                     </div>
                 </li>
                 @endauth
                 @guest
                 <li>
-                    <div class="nav-inner-span">
-                        @section('content')
+                    <div class="nav-inner-span">   
                         <span> Hi, user! </span>
                     </div>
                 </li>                

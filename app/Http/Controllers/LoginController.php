@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
-    public function checkUser(Request $request){
+    public function authenticate(Request $request){
         $credentials = $request->validate([
             'nik' => 'required|max:16|min:16',
             'password' => 'required|min:5|max:255',
@@ -17,8 +17,6 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            
-            $user = Auth::user();
 
             return redirect()->intended('/home');
         }
@@ -32,8 +30,8 @@ class LoginController extends Controller
 
     }
 
-    public function login() {
-        return view("/login");
+    public function index() {
+        return view("login");
     }
 
 }

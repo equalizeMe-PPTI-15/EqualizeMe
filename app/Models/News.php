@@ -11,5 +11,11 @@ class news extends Model
     protected $primaryKey = 'idNews';
     protected $guarded = ['idNews'];
 
-    protected $fillable = ['heading', 'newsTitle', 'newsContent', 'gambar'];
-}
+    public function scopeFilter($query, array $filtercarinews){
+
+        $query->when($filtercarinews['filtercarinews'] ?? false, function($query, $valuefiltercari){
+            return $query->where('heading', 'like', '%' . $valuefiltercari . '%');
+        });
+    }
+    
+    }

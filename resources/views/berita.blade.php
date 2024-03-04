@@ -43,12 +43,25 @@
     <!-- Pencarian -->
     <div class="container-wrapper" style="box-sizing: border-box;  margin-bottom: 2vh;">
         <div class="search_wrap search_wrap_2" style="border:0.2px solid grey; border-radius: 3px;">
-            <div class="search_box">
-                <div class="btn btn_common">
-                    <i class="fas fa-search"></i>
+
+            {{-- <form action="/berita" type="get">
+                <div class="search_box">
+                        <button class="btn btn_common" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    <input type="text" class="input" placeholder="Pencarian..." name="filtercarinews" 
+                    value="{{ request('filtercarinews') }}">
                 </div>
-                <input type="text" class="input" placeholder="Pencarian...">
-            </div>
+            </form> --}}
+            <form action="/berita" type="get">
+                <div class="search_box">
+                        <button class="btn btn_common" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    <input type="text" class="input" placeholder="Pencarian..." name="filtercarinews" 
+                    value="{{ request('filtercarinews') }}">
+                </div>
+            </form>
         </div>
     </div>
 
@@ -77,7 +90,7 @@
                 <a href="#" onclick="showPopup({{ $news->idNews }})">
                     {{-- <a href="{{ route("news", 1) }}"></a> --}}
                     <div class="beritanya">
-                        <img src={{$news->gambar}} alt="">
+                        <img src="../../Image/{{$news->gambar}}" alt="">
                         <div class="content-h6-berita">
                             <h6> {{$news->heading}} </h6>
                             <span class="baca-span" >baca selengkapnya...</span>
