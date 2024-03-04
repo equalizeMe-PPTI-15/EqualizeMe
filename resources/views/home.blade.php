@@ -65,11 +65,22 @@
                         </a>
                     </div>
                 </li>
+                @auth
                 <li>
                     <div class="nav-inner-span">
-                        <span>Hi, name</span>
+                        <span> Hi, {{ Auth()->user()->name }} </span>
                     </div>
                 </li>
+                @else
+                <li>
+                    <div class="nav-inner-span">
+                        <span> Hi, user! </span>
+                    </div>
+                </li>                
+                @endauth
+                    <!-- <div class="nav-inner-span">
+                        <span>Hi, name</span>
+                    </div> -->
             </div>
         </div>
         <div class="nav-inner-right">

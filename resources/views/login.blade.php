@@ -31,21 +31,41 @@
 
 </head>
 <body>
+
 <div class="container">
     <h1>Login</h1>
-    <form action="action.php" method="post">
-      
-<div class="form-group">
+    <form action="/login" method="post">
+        @csrf
+    
+    @if(session()->has('loginError'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ session('loginError') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
+
+    <div class="form-group">
 
         
 <label for="nik">NIK</label> 
-<input type="number" class="form-control" id="nik" name="nik" required>          
+<input type="number" class="form-control @error('nik') is-invalid @enderror" id="nik" name="nik" autofocus required value="{{ old('nik') }}">
+    @error('nik')
+    <div class="invalid-feedback">
+        {{ $message }}
+    </div>
+    @enderror      
 </div>
           
 <div class="form-group">
 <label for="password">Password</label>
-<input type="password" class="form-control" id="password" name="password" required>
-</div>
+<input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required>
+    @error('password')
+    <div class="invalid-feedback">
+        {{ $message }}
+    </div>
+    @enderror
+    </div>
+
 <button type="submit" class="btn btn-primary">Login</button>
     </form>
     <div class="divKata">
