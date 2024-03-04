@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('picture')->nullable()->default('akun1.png');
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
+            $table->rememberToken();
         });
     }
 
