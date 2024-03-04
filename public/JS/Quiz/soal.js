@@ -1,13 +1,13 @@
 let questions =[
     {
         numb :1,
-        question:"Lorem, ipsum dolor sit amet consectetur",
-        answer:"C. Lorem, ipsum dolor sit amet consectetur",
+        question:"Permendikbudristek nomor .. Tahun .... tentang pencegahan dan penanganan kekerasan seksual di lingkungan perguruan tinggi.",
+        answer:"A. 30, 2021",
         options:[
-            "A. Lorem, ipsum dolor sit amet consecttur",
-            "B. Lorem, ipsum dolor sit amet consecteur",
-            "C. Lorem, ipsum dolor sit amet consectetur",
-            "D. Lorem, ipsum dolor sit amet consectetu"
+            "A. 30, 2021",
+            "B. 10, 2020",
+            "C. 8, 2022",
+            "D. 5, 2000"
         ]
     },
     {
