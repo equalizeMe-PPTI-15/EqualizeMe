@@ -1,11 +1,14 @@
 <?php
 
+use App\Models\News;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DialogController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\NewsEduController;
 use App\Http\Controllers\RegisterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +21,7 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
+// NOTE: Rapihin route nya yang duplicate
 Route::get('/', function () {
     return view('register');
 });
@@ -30,9 +34,8 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::get('/helpme', function () {
     return view('helpme');
@@ -58,3 +61,13 @@ Route::get('/helpme', [DialogController::class,'index']);
 Route::get('/helpme2/{dialog}', [DialogController::class,'show']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+// Route::get('/home', [NewsEduController::class, 'index'])->name('home');
+
+// Route::resource('berita', BeritaController::class);
+
+// Route::get('/berita/{news}', [BeritaController::class, 'show']);
+Route::get('/berita', [BeritaController::class, 'index']);
+Route::get('/berita/{id}/data', [BeritaController::class, 'getNewsData'])->name("news");
+// Route::get('/berita/{filtercarinews}', [BeritaController::class, 'searchNews']);

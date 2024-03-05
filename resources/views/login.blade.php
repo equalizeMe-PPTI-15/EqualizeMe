@@ -35,7 +35,7 @@
 <div class="container">
     <h1>Login</h1>
     <form action="/login" method="post">
-        @csrf
+    @csrf
     
     @if(session()->has('loginError'))
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -44,7 +44,7 @@
     </div>
     @endif
 
-    <div class="form-group">
+<div class="form-group">
 
         
 <label for="nik">NIK</label> 
@@ -65,7 +65,7 @@
     </div>
     @enderror
     </div>
-
+</div>
 <button type="submit" class="btn btn-primary">Login</button>
     </form>
     <div class="divKata">

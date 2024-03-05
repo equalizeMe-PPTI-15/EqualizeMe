@@ -6,6 +6,9 @@ use App\Models\News;
 use App\Models\Education;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\News;
+use App\Models\Education;
+use App\Models\User;
 
 
 class HomeController extends Controller
@@ -18,5 +21,7 @@ class HomeController extends Controller
             "title" => "news",
             "news" => News::latest()->get(),
             "edu_title" => "education",
-            "education" => Education::latest()->get()]);}
+            "education" => Education::latest()->get()
+        ]);
+    }
 }
