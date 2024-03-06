@@ -66,11 +66,13 @@
     @enderror
     </div>
 </div>
-<button type="submit" class="btn btn-primary">Login</button>
-    </form>
+<div class="buttonsubmit">
+    <button type="submit" class="btn btn-primary">Login</button>
+    </div>    
+</form>
     <div class="divKata">
         <a class="kata">Tidak punya akun? </a>
-        <a href="#" class="kata-login">Daftar</a>
+        <a href="/register" class="kata-login">Daftar</a>
     </div>
     
   </div>

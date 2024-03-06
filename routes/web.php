@@ -45,10 +45,6 @@ Route::get('/home', function () {
     return view('home');
 });
 
-// Route::get('/home', [NewsEduController::class, 'index']);
-Route::get('/login', [LoginController::class, 'login'])->middleware('guest');
-Route::post('/login', [LoginController::class, 'checkUser']);
-
 Route::get('/berita', function () {
     return view('berita');
 });
@@ -60,7 +56,6 @@ Route::get('/sandi', function(){
 Route::get('/helpme', [DialogController::class,'index']);
 Route::get('/helpme2/{dialog}', [DialogController::class,'show']);
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 // Route::get('/home', [NewsEduController::class, 'index'])->name('home');
