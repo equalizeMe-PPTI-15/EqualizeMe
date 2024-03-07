@@ -2,11 +2,12 @@
 
 use App\Models\News;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AkunController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BeritaController;
-use App\Http\Controllers\AkunController;
 use App\Http\Controllers\DialogController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\NewsEduController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\EducationController;
@@ -46,7 +47,7 @@ Route::get('/helpme', function () {
 //     return view('home');
 // });
 
-Route::get('/home', [NewsEduController::class, 'index']);
+// Route::get('/home', [NewsEduController::class, 'index']);
 
 Route::get('/berita', function () {
     return view('berita');
@@ -67,10 +68,6 @@ Route::get('/akun/{user}', [AkunController::class, 'store']);
 Route::get('/sandi/{user}', [AkunController::class, 'index2']);
 Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
 
-<<<<<<< Updated upstream
-=======
-// Route::get('/home', [HomeController::class, 'index']);
->>>>>>> Stashed changes
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 // Route::get('/home', [NewsEduController::class, 'index'])->name('home');
@@ -83,3 +80,5 @@ Route::get('/berita/{id}/data', [BeritaController::class, 'getNewsData'])->name(
 // Route::get('/berita/{filtercarinews}', [BeritaController::class, 'searchNews']);
 
 // Route::get('/berita/search', [BeritaController::class, 'search']);
+
+Route::post('/logout', [LogoutController::class, 'LogoutUser']);

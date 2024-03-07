@@ -127,6 +127,13 @@
         </div>
     </nav>
 
+    {{-- <li> --}}
+        <form action="/logout" method="POST" id="logoutForm">
+            @csrf
+            <button type="submit">Logout</button>
+        </form>
+    {{-- </li> --}}
+
     <!-- content untuk shortcut alarm -->
     <div class="outter-banner-alarm dflex">
         <div class="banner-alarm dflex">

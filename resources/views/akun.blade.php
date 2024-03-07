@@ -74,8 +74,8 @@
                         // Example JavaScript to update the image source dynamically
                         var imageAkunContainer = document.getElementById('imageAkunContainer');
                         var imageUrl;
-                        
                         @if ($akuns->picture != 'akun1.png')
+                            // alert('hai');
                             imageUrl = "{{ asset('storage/'. $akuns->picture) }}";
                         @else
                             imageUrl = "../../Image/{{ $akuns->picture }}";
@@ -101,15 +101,14 @@
                 <div class="content-form">
                     <div class="w-100">
                         <label for="fname">Nama Lengkap</label>
-                        <input type="text" id="fname" name="fname" value="{{ $akuns->name }}" disabled>
-                        <br>
+                        <input type="text" id="fname" name="fname" value="{{ $akuns->name }}" class="form-control" disabled>
+                        
                         <br>
                         <label for="nik">NIK</label>
-                        <input type="text" id="nik" name="nik" value="{{ $akuns->nik }}" disabled>
+                        <input type="text" id="nik" name="nik" value="{{ $akuns->nik }}" class="form-control" disabled>
 
                         <br>
-                        <br>
-                        <label for="notelp" class="label-form " disabled >No. Telp
+                        <label for="notelp" class="label-form" disabled >No. Telp
                             <img src="../../Image/edit_pencil_icon_143022.png" alt="image">
                         </label>
                         <input autocomplete="off" type="text" id="notelp" name="notelp" value="{{ $akuns->phoneNumber }}" placeholder="08XXXXXXXXXXX" class="form-control @error('notelp') is-invalid @enderror" disabled>
@@ -202,13 +201,13 @@
 
     <script>
         // Get the input element
-        // var notelp = document.getElementById('notelp');
-        // notelp.addEventListener('input', function () {
-        //     this.value = this.value.replace(/[^0-9]/g, '');
-        //     if (this.value.length > 13) {
-        //         this.value = this.value.slice(0, 13);
-        //     }
-        // });
+        var notelp = document.getElementById('notelp');
+        notelp.addEventListener('input', function () {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 13) {
+                this.value = this.value.slice(0, 13);
+            }
+        });
         // var errorMsgNoTelp = document.getElementById("errorMsgNoTelp");
         // var buttonn = document.getElementById("saveButton");
         // var minLength = 11;
@@ -268,11 +267,11 @@
             //     $(this).attr('disabled', 'disabled');
             // });
 
-            // $("input").keypress(function (e) {
-            //     if (e.which === 13) {
-            //         $("input").attr('disabled', 'disabled');
-            //     }
-            // });
+            $("input").keypress(function (e) {
+                if (e.which === 13) {
+                    $("input").attr('disabled', 'disabled');
+                }
+            });
         });
     </script>
 </body>

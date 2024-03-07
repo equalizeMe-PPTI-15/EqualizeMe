@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
             'nik' => '1234567890123457',
             'address' => 'Jalan Pakuan',
             'phoneNumber' => '081271908222',
-            'picture' => 'akun.png'
+            'picture' => 'akun1.png'
         ]);
 
         News::create([

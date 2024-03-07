@@ -11,7 +11,7 @@ class AkunController extends Controller
     public function index(){
         return view('akun', [
             "title" => "akun",
-            "akuns" => User::find(3)
+            "akuns" => auth()->user()
         ]);
     }
 
@@ -41,6 +41,7 @@ class AkunController extends Controller
     }
 
     public function store(Request $request, User $user){
+        // dd($user);
         if(!request('notelp')){
             $requestnotelp = $user->phoneNumber;
         }else{
@@ -79,8 +80,8 @@ class AkunController extends Controller
 
         $user->update([
             'phoneNumber' => $requestnotelp,
-            'address' => $requestalamat,
             'email' => $requestemail,
+            'address' => $requestalamat,
             'picture' => $requestImageAkun
         ]);
 
