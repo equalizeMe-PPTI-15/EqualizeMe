@@ -6,7 +6,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DialogController;
 use App\Http\Controllers\BeritaController;
-use App\Http\Controllers\DialogController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\NewsEduController;
 use App\Http\Controllers\RegisterController;
@@ -38,18 +37,6 @@ Route::get('/register', function () {
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
-
-Route::get('/helpme', function () {
-    return view('helpme');
-});
-
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/berita', function () {
-    return view('berita');
-});
 
 Route::get('/sandi', function(){
     return view('sandi');
