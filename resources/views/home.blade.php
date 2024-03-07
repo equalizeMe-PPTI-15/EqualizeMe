@@ -173,7 +173,12 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
                             <li><a class="dropdown-item" href="#">Ubah Sandi</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li>
+                                <form action="/logout" method="POST" id="logoutForm">
+                                @csrf
+                                    <button type="submit" class="dropdown-item" href="#">Logout</button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                     <!-- </div>  -->
@@ -183,10 +188,10 @@
     </nav>
 
     {{-- <li> --}}
-        <form action="/logout" method="POST" id="logoutForm">
+        {{-- <form action="/logout" method="POST" id="logoutForm">
             @csrf
             <button type="submit">Logout</button>
-        </form>
+        </form> --}}
     {{-- </li> --}}
 
     <!-- content untuk shortcut alarm -->

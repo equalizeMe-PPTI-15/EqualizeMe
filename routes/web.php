@@ -7,7 +7,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DialogController;
 use App\Http\Controllers\BeritaController;
-use App\Http\Controllers\DialogController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\NewsEduController;
 use App\Http\Controllers\RegisterController;
