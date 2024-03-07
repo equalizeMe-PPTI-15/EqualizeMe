@@ -1,11 +1,12 @@
 <?php
 
 use App\Models\News;
-use App\Http\Controllers\DialogController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\DialogController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\NewsEduController;
 use App\Http\Controllers\RegisterController;
 
@@ -41,10 +42,7 @@ Route::get('/helpme', function () {
     return view('helpme');
 });
 
-<<<<<<< Updated upstream
-=======
 // Route::get('/home', [HomeController::class, 'index']);
->>>>>>> Stashed changes
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 // Route::get('/home', [NewsEduController::class, 'index'])->name('home');
@@ -57,3 +55,4 @@ Route::get('/berita/{id}/data', [BeritaController::class, 'getNewsData'])->name(
 // Route::get('/berita/{filtercarinews}', [BeritaController::class, 'searchNews']);
 
 // Route::get('/berita/search', [BeritaController::class, 'search']);
+Route::post('/logout', [LogoutController::class, 'LogoutUser']);
