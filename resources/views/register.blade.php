@@ -117,7 +117,7 @@
         </form>
         <div class="divKata">
             <a class="kata">Sudah punya akun? </a>
-            <a href="#" class="kata-login">Login</a>
+            <a href="/login" class="kata-login">Login</a>
         </div>
         
       </div>
