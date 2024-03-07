@@ -1,5 +1,5 @@
 .container {
-    width: 500px;
+    /* width: 500px; */
     margin: 0 auto;
   }
   
@@ -32,7 +32,7 @@
   }
   
   button {
-    width: 100%;
+    width: 85%;
     background-color: #000;
     color: #fff;
     padding: 10px;
@@ -55,4 +55,10 @@
   }
   .kata-login{
     color: red;
+  }
+
+  .buttonsubmit{
+    align-items: center;
+    text-align: center;
+    
   }

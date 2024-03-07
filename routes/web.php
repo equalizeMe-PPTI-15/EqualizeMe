@@ -4,6 +4,7 @@ use App\Models\News;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DialogController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DialogController;
 use App\Http\Controllers\LogoutController;
@@ -41,6 +42,21 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/helpme', function () {
     return view('helpme');
 });
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/berita', function () {
+    return view('berita');
+});
+
+Route::get('/sandi', function(){
+    return view('sandi');
+});
+
+Route::get('/helpme', [DialogController::class,'index']);
+Route::get('/helpme2/{dialog}', [DialogController::class,'show']);
 
 // Route::get('/home', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
