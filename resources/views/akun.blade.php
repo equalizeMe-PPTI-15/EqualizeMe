@@ -108,7 +108,7 @@
                         <input type="text" id="nik" name="nik" value="{{ $akuns->nik }}" class="form-control" disabled>
 
                         <br>
-                        <label for="notelp" class="label-form" disabled >No. Telp
+                        <label for="notelp" class="label-form">No. Telp
                             <img src="../../Image/edit_pencil_icon_143022.png" alt="image">
                         </label>
                         <input autocomplete="off" type="text" id="notelp" name="notelp" value="{{ $akuns->phoneNumber }}" placeholder="08XXXXXXXXXXX" class="form-control @error('notelp') is-invalid @enderror" disabled>
@@ -119,7 +119,7 @@
                         </div>
                         @enderror
                         <br>
-                        <label for="alamat" class="label-form" disabled >Alamat
+                        <label for="alamat" class="label-form">Alamat
                             <img src="../../Image/edit_pencil_icon_143022.png" alt="image" >
                         </label>
                         <input  type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" name="alamat" value="{{ $akuns->address }}" disabled>
@@ -131,7 +131,7 @@
                         @enderror
                         
                         <br>
-                        <label for="email" class="label-form" disabled>Email
+                        <label for="email" class="label-form">Email
                             <img src="../../Image/edit_pencil_icon_143022.png" alt="image" >
                         </label>
                         <input type="text" id="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ $akuns->email }}" placeholder="@gmail.com" disabled>
@@ -142,9 +142,9 @@
                         </div>
                         @enderror
                         {{-- <br> --}}
-                        <div class="ubah-pass">
+                        {{-- <div class="ubah-pass">
                         <a href="/sandi/{{ $akuns->id }}">Ubah Password</a>
-                        </div>
+                        </div> --}}
                         <br>
                         {{-- <button id="saveButton" type="submit">Simpan</button> --}}
                         <div class="button-simpan">
@@ -250,6 +250,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
+
+        $("input").blur(function () {
+            $(this).attr('enabled');
+        });
+    
         $(document).ready(function () {
 
             $(".label-form img").click(function () {
@@ -263,6 +268,7 @@
             //     $(`input[name=${name}]`).attr('disabled', 'disabled');
             // });
 
+            
             // $("input").blur(function () {
             //     $(this).attr('disabled', 'disabled');
             // });
