@@ -24,6 +24,7 @@
         html {
             scroll-behavior: smooth;
         }
+        
     </style>
 
     <link rel="website icon" type="png" href="../../Image/logo.jpg">
@@ -37,7 +38,14 @@
     </div>
     @endif
 
-    <form action="/pengaduan" method="post" enctype="multipart/form-data">
+    <div class="belumLogin" id="belumLogin">
+        <p>Silakan register terlebih dahulu</p>
+        <a href="/register">Register</a>
+        <p>Sudah punya akun?</p>
+        <a href="/login">Login</a>
+    </div>
+
+    <form action="/pengaduan" method="post" enctype="multipart/form-data" id="formPengaduan" style="display:none;">
         @csrf
         <div class="container-content-pengaduan">
             <div class="container-upload-file">
@@ -92,7 +100,7 @@
     <nav class="navbar navbar-expand navbar-dark bg-primary text-white fixed-bottom">
         <ul class="navbar-nav nav-justified w-100 ">
             <li class="nav-item">
-                <a href="../../HTML/Project-HTML/Beranda.html" class="nav-link">
+                <a href="/home" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-house" viewBox="0 0 16 16" alt="Beranda">
                         <path
@@ -102,7 +110,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../Project-HTML/Berita.html" class="nav-link">
+                <a href="/berita" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-newspaper" viewBox="0 0 16 16" alt="Berita">
                         <path
@@ -115,7 +123,7 @@
             </li>
             <li class="nav-item" style="display: flex; align-items: start; ">
                 <div class="nav-help">
-                    <a href="#" class="nav-link" style=" padding-bottom:0;">
+                    <a href="/helpme" class="nav-link" style=" padding-bottom:0;">
                         <div class="nav-helpme" style=" width: 100%; height: 100%; ">
                             <img src="../../Image/helpme.png" width="70" height="40" alt="HelpMe"
                                 style="margin-top: 1%;">
@@ -125,7 +133,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="../Project-HTML/edu.html" class="nav-link">
+                <a href="/education" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-book" viewBox="0 0 16 16" alt="Edukasi">
                         <path
@@ -135,7 +143,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="/pengaduan" class="nav-link active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-exclamation-octagon" viewBox="0 0 16 16" alt="Pengaduan">
                         <path
@@ -152,5 +160,22 @@
     <!-- script -->
     <script src="../../JS/pengaduan/script-upload-file.js"></script>
 </body>
+
+</script>
+
+<!-- script register login -->
+<script>
+    
+    @auth
+        var div = document.getElementById('belumLogin');
+        if(div) {
+            div.style.display = 'none';
+        }
+        var pengaduan = document.getElementById('formPengaduan');
+        pengaduan.style.display = 'block';
+
+    @endauth
+    
+</script>
 
 </html>

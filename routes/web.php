@@ -27,7 +27,7 @@ use App\Http\Controllers\EducationController;
 
 // NOTE: Rapihin route nya yang duplicate
 Route::get('/', function () {
-    return view('home');
+    return view('/homes');
 });
 
 Route::get('/register', [RegisterController::class, 'index']);
@@ -44,12 +44,6 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/helpme', function () {
     return view('helpme');
 });
-
-// Route::get('/home', function () {
-//     return view('home');
-// });
-
-// Route::get('/home', [NewsEduController::class, 'index']);
 
 Route::get('/berita', function () {
     return view('berita');
@@ -69,13 +63,6 @@ Route::get('/helpme', [DialogController::class,'index']);
 Route::get('/helpme2/{dialog}', [DialogController::class,'show']);
 
 Route::get('/quiz', [quizController::class, 'index']);
-
-Route::get('/akun', [AkunController::class, 'index']);
-Route::post('/akun/{user}', [AkunController::class, 'store']);
-Route::get('/akun/{user}', [AkunController::class, 'store']);
-
-Route::get('/sandi/{user}', [AkunController::class, 'index2']);
-Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
 
 Route::get('/akun', [AkunController::class, 'index']);
 Route::post('/akun/{user}', [AkunController::class, 'store']);
