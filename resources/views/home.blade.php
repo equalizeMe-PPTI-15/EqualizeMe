@@ -84,21 +84,10 @@
                     </div>
                 </li>
 
-
-                <!-- <li>
-                    <div id="profile" class="icon-profile">
-                        <img src="../../Image/akun.png" alt="">
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/register">Register</a></li>
-                            <li><a class="dropdown-item" href="/login">Login</a></li>
-                        </ul>
-                    </div>
-                </li> -->
                 @auth 
                 <li>
                     <div id="profile" class="icon-profile" style="display: none;">
                         <a href="/akun">
-                            <!-- <p>{{ auth()->user()->picture }}</p> -->
                             @if(auth()->user()->picture != 'akun1.png')
                                 <img src="{{ asset('storage/'. auth()->user()->picture) }}" alt="">
                             @else
@@ -135,36 +124,10 @@
                 </li>                
                 @endguest
 
-                <!-- {{-- @auth
-                <li>
-                    <div class="nav-inner-span">
-                        @section('content')
-                        <span> Hi, {{auth()->user()->name }} </span>
-                    </div>
-                </li>
-                @else
-                <li>
-                    <div class="nav-inner-span">
-                        @section('content')
-                        <span> Hi, user! </span>
-                    </div>
-                </li>
-                @endauth --}} -->
             </div>
         </div>
         <div class="nav-inner-right">
             <div class="dflex nav-content-inner-right">
-                <!-- <li>
-                    <div class="icon-profile-r">
-                        <a href="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-bell" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
-                            </svg>
-                        </a>
-                    </div>
-                </li> -->
                 <li>
                     <!-- <div class="icon-profile-r"> -->
                     <div class="dropdown" id="dropdown">
@@ -181,7 +144,7 @@
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
                             <li><a class="dropdown-item" href="#">Ubah Sandi</a></li>
                             <li>
-                                <form action="/logout" method="POST" id="logoutForm">
+                                <form action="/logout" method="POST" id="logoutForm" style="display: none;">
                                 @csrf
                                     <button type="submit" class="dropdown-item" href="#">Logout</button>
                                 </form>
@@ -452,6 +415,10 @@
 
         var profile = document.getElementById('profile');
         profile.style.display = 'block';
+
+        var logout = document.getElementById('logoutForm');
+        logout.style.display = 'block';
+
     @endauth
     
 </script>

@@ -25,7 +25,7 @@ use App\Http\Controllers\EducationController;
 
 // NOTE: Rapihin route nya yang duplicate
 Route::get('/', function () {
-    return view('register');
+    return view('home');
 });
 
 Route::get('/register', [RegisterController::class, 'index']);
