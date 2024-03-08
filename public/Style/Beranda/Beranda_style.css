@@ -97,27 +97,39 @@ body{
     display: flex;
     /* justify-content: center; */
 }
-
 .icon-profile{
+    width: 100%;
+    color: white;
     /* border: solid blue; */
-    border-radius: 50%;
-    overflow:hidden;
 }
 
-.icon-profile-r a{
-    /* border: solid red; */
-    color: white;
-    /* width: 100%; */
-}
-.icon-profile a img{
+.icon-profile img{
     width: 40px;
     height: 40px;
-    background-size: cover;
-    border-radius: 50%;
+}
+
+.icon-profile-r {
+    /* border: solid red; */
+    color: white;
+    width: 100%;
+    /* overflow: hidden; */
+    /* border-radius: 50%; */
+}
+.icon-profile-r img{
+    width: 40px;
+    height: 40px;
+    /* background-size: cover; */
     /* border: 1px solid black; */
     /* margin: 5px; */
+    /* width: ; */
+    /* width: 10%; */
 
 }
+.icon-profile-r a svg{
+    color: white;
+}
+
+
 .outter-banner-alarm{
     /* border: solid black; */
     height: 25vh;
