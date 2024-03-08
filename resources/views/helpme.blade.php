@@ -83,7 +83,7 @@
     <nav class="navbar navbar-expand navbar-dark bg-primary text-white fixed-bottom">
         <ul class="navbar-nav nav-justified w-100 ">
             <li class="nav-item">
-                <a href="HTML/Project-HTML/Beranda.html" class="nav-link">
+                <a href="/home" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-house" viewBox="0 0 16 16" alt="Beranda">
                         <path
@@ -93,7 +93,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/berita" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-newspaper" viewBox="0 0 16 16" alt="Berita">
                         <path
@@ -116,7 +116,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/education" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-book" viewBox="0 0 16 16" alt="Edukasi">
                         <path

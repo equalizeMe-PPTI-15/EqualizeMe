@@ -142,9 +142,9 @@
                         </div>
                         @enderror
                         {{-- <br> --}}
-                        <div class="ubah-pass">
+                        {{-- <div class="ubah-pass">
                         <a href="/sandi/{{ $akuns->id }}">Ubah Password</a>
-                        </div>
+                        </div> --}}
                         <br>
                         {{-- <button id="saveButton" type="submit">Simpan</button> --}}
                         <div class="button-simpan">
@@ -252,7 +252,7 @@
     <script>
 
         $("input").blur(function () {
-            $(this).attr('disabled', 'enabled');
+            $(this).attr('enabled');
         });
     
         $(document).ready(function () {

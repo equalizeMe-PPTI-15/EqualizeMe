@@ -134,7 +134,7 @@
             </li>
             <li class="nav-item" style="display: flex; align-items: start; ">
                 <div class="nav-help">
-                    <a href="#" class="nav-link" style=" padding-bottom:0;">
+                    <a href="/helpme" class="nav-link" style=" padding-bottom:0;">
                         <div class="nav-helpme" style=" width: 100%; height: 100%; ">
                             <img src="../../Image/helpme.png" width="70" height="40" alt="HelpMe"
                                 style="margin-top: 1%;">

@@ -9,7 +9,7 @@
 <body>
 	<div class="container">
 		<div class="back">
-            <a href="/akun/{{ $akuns->id }}"><img src="{{ asset("Image/back.png") }}" alt=""></a>
+            <a href="/home"><img src="{{ asset("Image/back.png") }}" alt=""></a>
         </div>
         @if(session('success'))
         <div class="alertsuccess alert-success">
