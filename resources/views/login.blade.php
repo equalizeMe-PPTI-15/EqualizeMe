@@ -44,30 +44,30 @@
     </div>
     @endif
 
-<div class="form-group">
+    <div class="form-group">
 
         
-<label for="nik">NIK</label> 
-<input type="number" class="form-control @error('nik') is-invalid @enderror" id="nik" name="nik" autofocus required value="{{ old('nik') }}">
-    @error('nik')
-    <div class="invalid-feedback">
-        {{ $message }}
+    <label for="nik">NIK</label> 
+    <input type="number" class="form-control @error('nik') is-invalid @enderror" id="nik" name="nik" autofocus required value="{{ old('nik') }}">
+        @error('nik')
+        <div class="invalid-feedback">
+            {{ $message }}
+        </div>
+        @enderror      
     </div>
-    @enderror      
-</div>
           
-<div class="form-group">
-<label for="password">Password</label>
-<input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required>
-    @error('password')
-    <div class="invalid-feedback">
-        {{ $message }}
+    <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required>
+        @error('password')
+        <div class="invalid-feedback">
+            {{ $message }}
+        </div>
+        @enderror
+        </div>
     </div>
-    @enderror
-    </div>
-</div>
-<div class="buttonsubmit">
-    <button type="submit" class="btn btn-primary">Login</button>
+    <div class="buttonsubmit">
+        <button type="submit" class="btn btn-primary">Login</button>
     </div>    
 </form>
     <div class="divKata">

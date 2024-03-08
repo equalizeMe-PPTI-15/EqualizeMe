@@ -94,14 +94,31 @@
                         </ul>
                     </div>
                 </li> -->
-
+                @auth 
                 <li>
                     <div id="profile" class="icon-profile" style="display: none;">
-                        <a href="/berita">
+                        <a href="/akun">
+                            <!-- <p>{{ auth()->user()->picture }}</p> -->
+                            @if(auth()->user()->picture != 'akun1.png')
+                                <img src="{{ asset('storage/'. auth()->user()->picture) }}" alt="">
+                            @else
+                                <img src="../../Image/akun.png" alt="">
+                            @endif
+                            
+                        </a>
+                    </div>
+                </li>
+                @endauth
+
+                @guest
+                <li>
+                    <div id="profile" class="icon-profile" style="display: none;">
+                        <a href="/akun">
                             <img src="../../Image/akun.png" alt="">
                         </a>
                     </div>
                 </li>
+                @endguest
 
                 @auth
                 <li>
@@ -117,13 +134,6 @@
                     </div>
                 </li>                
                 @endguest
-                
-                <li>
-                    <form action="/logout" method="POST" id="logoutForm">
-                        @csrf
-                        <button type="submit">Logout</button>
-                    </form>
-                </li>
 
                 <!-- {{-- @auth
                 <li>
