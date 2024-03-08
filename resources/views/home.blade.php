@@ -170,7 +170,12 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
                             <li><a class="dropdown-item" href="#">Ubah Sandi</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li>
+                                <form action="/logout" method="POST" id="logoutForm">
+                                @csrf
+                                    <button type="submit" class="dropdown-item" href="#">Logout</button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                     <!-- </div>  -->
@@ -178,6 +183,13 @@
             </div>
         </div>
     </nav>
+
+    {{-- <li> --}}
+        {{-- <form action="/logout" method="POST" id="logoutForm">
+            @csrf
+            <button type="submit">Logout</button>
+        </form> --}}
+    {{-- </li> --}}
 
     <!-- content untuk shortcut alarm -->
     <div class="outter-banner-alarm dflex">
@@ -328,7 +340,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="/edukasi" class="nav-link">
+                <a href="/education" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-book" viewBox="0 0 16 16" alt="Edukasi">
                         <path
