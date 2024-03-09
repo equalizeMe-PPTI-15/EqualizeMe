@@ -58,3 +58,6 @@ Route::get('/helpme', [DialogController::class,'index']);
 Route::get('/helpme2/{dialog}', [DialogController::class,'show']);
 
 Route::get('/quiz', [quizController::class, 'index']);
+Route::get('/quiz2', function () {
+    return view ('quiz2');
+});
