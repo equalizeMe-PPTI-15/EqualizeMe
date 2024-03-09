@@ -15,10 +15,10 @@ class AkunController extends Controller
         ]);
     }
 
-    public function index2(User $user){
+    public function index2(){
         return view('sandi', [
             "title" => "sandi",
-            "akuns" => $user
+            "akuns" => auth()->user()
         ]);
     }
 

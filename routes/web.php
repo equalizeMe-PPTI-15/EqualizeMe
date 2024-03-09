@@ -72,7 +72,7 @@ Route::get('/akun', [AkunController::class, 'index']);
 Route::post('/akun/{user}', [AkunController::class, 'store']);
 Route::get('/akun/{user}', [AkunController::class, 'store']);
 
-Route::get('/sandi/{user}', [AkunController::class, 'index2']);
+Route::get('/sandi', [AkunController::class, 'index2']);
 Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
 
 // Route::get('/home', [HomeController::class, 'index']);
