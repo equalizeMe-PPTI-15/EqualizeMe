@@ -84,6 +84,7 @@
         </div>
 
         <div class="container-berita">
+            @if ($berita->first() != null)
             @foreach ($berita as $news)
 
             <div class="content-berita">    
@@ -104,7 +105,10 @@
                 
             </div>
             @endforeach
-            
+            @else
+                <h5 style="text-align: center">pencarian '{{ request('filtercarinews') }}' tidak ditemukan</h5>
+            @endif
+
         </div>
     </div>
 
