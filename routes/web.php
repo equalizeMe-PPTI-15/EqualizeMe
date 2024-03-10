@@ -61,3 +61,9 @@ Route::get('/quiz', [quizController::class, 'index']);
 Route::get('/quiz2', function () {
     return view ('quiz2');
 });
+Route::get('/quiz3', function () {
+    return view ('quiz3');
+});
+Route::get('/quiz4', function () {
+    return view ('quiz4');
+});

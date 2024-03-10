@@ -1,56 +1,56 @@
 let questions =[
     {
         numb :1,
-        question:"Apa yang dilakukan oleh para laki-laki kepada Nisa?.",
-        answer:"A. Dipanggil-panggil dan disiuli",
+        question:"Video edukasi tadi dikhususkan untuk ...",
+        answer:"B. A dan C benar",
         options:[
-            "A. Dipanggil-panggil dan disiuli",
-            "B. Dirampok",
-            "C. Dipukuli",
-            "D. Semua salah"
+            "A. Anak-anak",
+            "B. A dan C benar",
+            "C. Remaja",
+            "D. Orang lanjut usia"
         ]
     },
     {
         numb :2,
-        question:"Kekerasan seksual adalah ...",
-        answer:"C. setiap tindakan berupa fisik maupun non fisik yang dilakukan seseorang / sekelompok yang mengakibatkan penderitaan secara psikis, fisik, dan seksual",
+        question:"Dimana kekerasan seksual bisa terjadi ?",
+        answer:"C. Seringkali di tempat tertutup",
         options:[
-            "A. setiap tindakan ketika orang memukul orang lain",
-            "B. Setiap tindakan yang melecehkan wanita saja",
-            "C. setiap tindakan berupa fisik maupun non fisik yang dilakukan seseorang / sekelompok yang mengakibatkan penderitaan secara psikis, fisik, dan seksual",
-            "D. Semua salah"
+            "A. Di sekolah saja",
+            "B. Di rumah orang lain saja",
+            "C. Seringkali di tempat tertutup",
+            "D. Di bus saja"
         ]
     },
     {
         numb :3,
-        question:"Apa saja bentuk-bentuk kekerasan seksual ?",
+        question:"Katakan TIDAK saat ...",
         answer:"D. Semua benar",
         options:[
-            "A. ucapan",
-            "B. Perilaku",
-            "C. Tindakan seksual tanpa persetujuan korban",
+            "A. Orang lain menyentuh alat kelaminmu",
+            "B. Menyuruhmu membuka baju di depannya",
+            "C. Menunjukkan bagian pribadi di depanmu",
             "D. Semua benar"
         ]
     },
     {
         numb :4,
-        question:"Ada berapa kasus kekerasan seksual dari tahun 2011 - 2019 ?",
-        answer:"B. 46.698",
+        question:"Waspadalah apabila di sekitar mu terdapat orang yang berperilaku aneh, seperti ...",
+        answer:"D. Semua benar",
         options:[
-            "A. 121.143",
-            "B. 46.698",
-            "C. 56.321",
-            "D. 87.543"
+            "A. Memberikan sesuatu dengan persyaratan",
+            "B. Mengajak ke tempat yang sepi",
+            "C. Mengancam untuk menuruti keinginannya",
+            "D. Semua benar"
         ]
     },
     {
         numb :5,
-        question:"Apa yang harus dilakukan bila kekerasan seksual terjadi ?",
+        question:"Apa yang harus dilakukan ketika terjadi kekerasan seksual ?",
         answer:"D. Semua benar",
         options:[
-            "A. Meminta bantuan",
+            "A. Ceritakan kepada orang tua / orang dewasa yang dipercaya",
             "B. Melaporkan kepada pihak berwajib",
-            "C. Menghubungi lembaga sosial masyarakat",
+            "C. Segera kumpulkan barang bukti yang dipakai ketika kejadian",
             "D. Semua benar"
         ]
     }

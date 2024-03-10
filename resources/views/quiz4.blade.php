@@ -1,6 +1,6 @@
 <!DOCTYPE html> 
 <html lang="en">
-<!-- YUK TANGKAL KEKERASAN SEKS -->
+<!-- CARA MELINDUNGI DIRI DARI KEJAHATAN SEKS -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -137,7 +137,7 @@
         </div>
 
     <script src="../../JS/Quiz/script_quiz.js"></script>
-    <script src="../../JS/Quiz/soal3.js"></script>
+    <script src="../../JS/Quiz/soal4.js"></script>
   
 </body>
 
