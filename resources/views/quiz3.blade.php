@@ -52,7 +52,7 @@
                         <h1>EqualizeMe Kuis</h1>
                         <div class="quiz-header">
                             <span>
-                                STOP Kekerasan Seksual
+                            YUK TANGKAL KEKERASAN SEKSUAL
                             </span>
                             <span class="header-score">
                                 Nilai: 0/5
@@ -108,7 +108,7 @@
                         </h1>
                         <div class="temp-p">
                             <!-- disini lu ngebacot sesuatu boleh tentang kuis konten atau mungkin lu mau berkeluh kesah. jangan lupa apus comment ini kalau udah selesai -->
-                            <p>Ini merupakan penilaian terhadap pemahaman kalian mengenai materi edukasi "STOP Kekerasan Seksual" yang sudah dibaca. Kuis ini tidak memiliki batasan waktu, maka dari itu, harap dikerjakan dengan baik dan benar.</p>
+                            <p>Ini merupakan penilaian terhadap pemahaman kalian mengenai materi edukasi "YUK TANGKAL KEKERASAN SEKSUAL" yang sudah dibaca. Kuis ini tidak memiliki batasan waktu, maka dari itu, harap dikerjakan dengan baik dan benar.</p>
                         </div>
                             <button class="start-button">Mulai</button>
                         </div>

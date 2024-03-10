@@ -58,7 +58,7 @@
                 <!-- <h1 class="title-pengaduan">Pengaduan</h1> -->
                 <div class="form-group mt-4">
                     <!-- <label for="nama"></label> -->
-                    <input type="text" class="form-control" id="nama" name="incidentAddress" placeholder="Tempat Kejadian" required value="{{ old('incidentAddress') }}">
+                    <input type="text" class="form-control" id="nama" name="incidentAddress" placeholder="Tempat Kejadian (ex : Jl. ..., Kec. ..., Kab ..., Kota ..." required value="{{ old('incidentAddress') }}">
                     @error('incidentAddress')
                     <div class="invalid-feedback">
                         {{ $message }}
