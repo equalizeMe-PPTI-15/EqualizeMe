@@ -47,7 +47,8 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('12345'),
             'nik' => '1234567890123456',
             'address' => 'Jalan Ratu',
-            'phoneNumber' => '081271908221'
+            'phoneNumber' => '081271908221', 
+            'picture' => 'akun1.png'
         ]);
 
         User::create([
@@ -56,7 +57,8 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('123456'),
             'nik' => '1234567890123457',
             'address' => 'Jalan Pakuan',
-            'phoneNumber' => '081271908222'
+            'phoneNumber' => '081271908222',
+            'picture' => 'akun1.png'
         ]);
 
         News::create([

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Helpme</title>
+    <title>Edukasi</title>
 
     <!-- bootstrap -->
-    <link href="Style/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Style/bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +17,14 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-    <link rel="stylesheet" href="Style/Helpme/helpme.css">
+    <!-- pencarian -->
+    <link rel="stylesheet" href="../../Style/Edu/wrapper_Edu.css">
 
+    <!-- popup -->
+    <link rel="stylesheet" href="../../Style/Edu/popup_edu.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../Style/Edu/style_edu.css">
 
     <style>
         * {
@@ -29,48 +36,78 @@
         }
     </style>
 
-    <link rel="website icon" type="png" href="Image/logo.jpg">
+    <link rel="website icon" type="png" href="../../Image/logo.jpg">
 </head>
 
 <body>
-
-   <!-- content untuk shortcut alarm -->
-   <div class="outter-banner-alarm dflex">
-        <div class="banner-alarm dflex">
-            <div class="logo-content-alarm dflex">
-                <div class="alarm-button dflex">
-                    <button id="btn" onclick="toggleAudio(); ">
-                        <span>Click Me!</span>
-                    </button>
-                    <script type="text/javascript" src="JS/sound.js">
-
-                    </script>
+    <!-- Pencarian -->
+    <div class="container-wrapper"
+        style="box-sizing: border-box;  margin-bottom: 2vh;">
+        <div class="search_wrap search_wrap_2" style="border:0.2px solid grey; border-radius: 3px;">
+            <form action="/education">
+                <div class="search_box">
+                        <button class="btn btn_common" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    <input type="text" class="input" placeholder="Pencarian..." name="filtercari" 
+                    value="{{ request('filtercari') }}">
                 </div>
-            </div>
-            <div class="text-content-alarm dflex">
-                <div class="text-h3-alarm">
-                    <h3>Alarm Bantuan!</h3>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 
-    <!-- isi helpme -->
-    <div class="dialog-container">
-    <div class="judul">
-            <p>Bantuan Rekaman Dialog</p>
+
+    <!-- content edu -->
+    <div class="container-edu">
+        <div class="content-edu">
+            @if ($educations->first() != null)
+                @foreach ($educations as $edu)
+                <a href="#" onclick="toggle_popup({{ $edu->idEducation }})">
+                    <div class="row-edu">
+                        <div class="gambar-content">
+                            <img src="../../Image/{{ $edu->gambarEducation }}" alt="">
+                        </div>
+                        <div class="content-edu-h6">
+                            <h6>{{ $edu->educationTitle }}</h6>
+                        </div>
+                    </div>
+                </a>
+                @endforeach
+            @else
+                <h5 style="text-align: center">pencarian '{{ request('filtercari') }}' tidak ditemukan</h5>
+            @endif
         </div>
-    @foreach ($dialogs as $dialog)
-    <article>
-    <div class="dialog-box">
-      <a href="/helpme2/{{$dialog->id}}" class="text-decoration-none"><p class="dialog-text">{{ $dialog->judul }}</p></a>
+
+        
     </div>
-    </article>
+
+
+    <!-- popup edu-->
+    @foreach ($educations as $edu)
+        <div class="popup_edu" id="popup{{ $edu->idEducation }}">
+            <h2>{{ $edu->educationTitle }}</h2>
+            <!-- <iframe src="../../Image/412503.jpg" ></iframe> -->
+            <div class="content-text-popup">
+                <video class="w-100" controls="true">
+                    <source src="../../Image/{{ $edu->videoEducation }}">
+                </video>
+                <!-- <img src="../../Image/412503.jpg" alt=""> -->
+                <!-- <iframe src="https://www.youtube.com/watch?v=pQr4O1OITJo&t=196s" frameborder="0" width="400" height="200"></iframe> -->
+                <!-- <iframe src="https://youtu.be/BFu8Kd_QfGI?si=TQ0k51ThlBIBFkl_" frameborder="0" width="100%" height="200" allowfullscreen></iframe> -->
+                <p>{!! $edu->educationContent !!}</p>
+            </div>
+            <div class="content-button">
+
+                <button class="button-kembali" onclick="toggle_popup({{ $edu->idEducation }})">Kembali</button>
+
+                <a href="#">
+                    <button class="button-quiz">Quiz</button>
+                </a>
+            </div>
+        </div>
     @endforeach
-  </div>
 
-
-    <!-- Navbar -->
+    <!-- Navbar Bawah -->
     <nav class="navbar navbar-expand navbar-dark bg-primary text-white fixed-bottom">
         <ul class="navbar-nav nav-justified w-100 ">
             <li class="nav-item">
@@ -97,9 +134,9 @@
             </li>
             <li class="nav-item" style="display: flex; align-items: start; ">
                 <div class="nav-help">
-                    <a href="#" class="nav-link" style=" padding-bottom:0;">
+                    <a href="/helpme" class="nav-link" style=" padding-bottom:0;">
                         <div class="nav-helpme" style=" width: 100%; height: 100%; ">
-                            <img src="Image/helpme.png" width="70" height="40" alt="HelpMe"
+                            <img src="../../Image/helpme.png" width="70" height="40" alt="HelpMe"
                                 style="margin-top: 1%;">
                         </div>
                     </a>
@@ -107,7 +144,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="/education" class="nav-link">
+                <a href="#" class="nav-link active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-book" viewBox="0 0 16 16" alt="Edukasi">
                         <path
@@ -131,9 +168,14 @@
         </ul>
     </nav>
 
-
-    <script type="text/javascript" src="JS/Template/scrolltopbtn.js"></script>
-
-
+    <script type="text/javascript">
+        function toggle_popup(id) {
+            var popup = document.getElementById('popup' + id)
+            popup.classList.toggle('active')
+        }
+    </script>
 </body>
+<!-- script in html -->
+<!-- <script type="text/javascript" src="../../JS/Template/scrolltopbtn.js"></script> -->
+
 </html>

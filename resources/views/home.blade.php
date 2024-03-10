@@ -71,46 +71,55 @@
         <div class="nav-inner-left">
             <div class="dflex nav-content-inner">
                 <li>
-                    <div class="dropdown" id="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                class="bi bi-person-circle" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                                <path fill-rule="evenodd"
-                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                            </svg>
-                        </button>
+                    <div class="icon-profile-r">
+                        <div class="dropdown" id="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../../Image/akun.png" alt="">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/register">Register</a></li>
+                                <li><a class="dropdown-item" href="/login">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+
+                <!-- <li>
+                    <div id="profile" class="icon-profile">
+                        <img src="../../Image/akun.png" alt="">
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/register">Register</a></li>
                             <li><a class="dropdown-item" href="/login">Login</a></li>
                         </ul>
                     </div>
-                </li>
-
+                </li> -->
+                @auth 
                 <li>
-                    <div id="profile" class="icon-profile-r" style="display: none;">
-                        <a href="/berita">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                class="bi bi-person-circle" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                                <path fill-rule="evenodd"
-                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/register">Register</a></li>
-                            <li><a class="dropdown-item" href="/login">Login</a></li>
-                        </ul>
+                    <div id="profile" class="icon-profile" style="display: none;">
+                        <a href="/akun">
+                            <!-- <p>{{ auth()->user()->picture }}</p> -->
+                            @if(auth()->user()->picture != 'akun1.png')
+                                <img src="{{ asset('storage/'. auth()->user()->picture) }}" alt="">
+                            @else
+                                <img src="../../Image/akun.png" alt="">
+                            @endif
+                            
+                        </a>
                     </div>
                 </li>
+                @endauth
 
+                @guest
                 <li>
-                    <div id="profile" class="icon-profile-r" style="display: none;">
-                        <a href="../Project-HTML/Akun.html">
+                    <div id="profile" class="icon-profile" style="display: none;">
+                        <a href="/akun">
                             <img src="../../Image/akun.png" alt="">
                         </a>
                     </div>
                 </li>
+                @endguest
+
                 @auth
                 <li>
                     <div class="nav-inner-span">
@@ -125,7 +134,7 @@
                     </div>
                 </li>                
                 @endguest
-                
+
                 <!-- {{-- @auth
                 <li>
                     <div class="nav-inner-span">
@@ -170,8 +179,14 @@
                     </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
-                            <li><a class="dropdown-item" href="#">Ubah Sandi</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li><a class="dropdown-item" href="/sandi">Ubah Sandi</a></li>
+                            {{-- <a href="/sandi/{{ $akuns->id }}">Ubah Password</a> --}}
+                            <li>
+                                <form action="/logout" method="POST" id="logoutForm">
+                                @csrf
+                                    <button type="submit" class="dropdown-item" href="#">Logout</button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                     <!-- </div>  -->
@@ -179,6 +194,13 @@
             </div>
         </div>
     </nav>
+
+    {{-- <li> --}}
+        {{-- <form action="/logout" method="POST" id="logoutForm">
+            @csrf
+            <button type="submit">Logout</button>
+        </form> --}}
+    {{-- </li> --}}
 
     <!-- content untuk shortcut alarm -->
     <div class="outter-banner-alarm dflex">
@@ -329,7 +351,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="/edukasi" class="nav-link">
+                <a href="/education" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-book" viewBox="0 0 16 16" alt="Edukasi">
                         <path
@@ -421,6 +443,19 @@
 </script>
 
 <!-- script register login -->
+<script>
+    
+    @auth
+        var dropdown = document.getElementById('dropdown');
+        if (dropdown) {
+            dropdown.style.display = 'none';
+        }
+
+        var profile = document.getElementById('profile');
+        profile.style.display = 'block';
+    @endauth
+    
+</script>
 
 <!-- swipper js -->
 <script src="../../JS/Template/carousel/swiper-bundle.min.js"></script>

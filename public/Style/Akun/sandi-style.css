@@ -18,7 +18,7 @@ body {
 	margin: 0 auto;
     /* border: solid red; */
     width: 98%;
-	height: 10vh;
+	/* height: 10vh; */
 	/* margin-bottom: 10px; */
 
 }
@@ -88,4 +88,22 @@ button[type="submit"]:hover {
 
 .buttonsubmit{
 	margin-top: 200px;
+}
+
+.alert{
+	margin-top: -5px;
+	margin-bottom: 12px;
+	color: red;
+	font-size: 12px;
+}
+
+.alertsuccess{
+	margin: 0 auto;
+	width: 100%;
+	/* border: solid red; */
+	align-items: center;
+	color: green;
+	text-align: center;
+	/* display: flex; */
+	position: absolute;
 }
