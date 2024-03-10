@@ -142,14 +142,16 @@
                     </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
+                            @auth
                             <li><a class="dropdown-item" href="/sandi/{{ auth()->user()->id }}">Ubah Sandi</a></li>
                             {{-- <a href="/sandi/{{ $akuns->id }}">Ubah Password</a> --}}
                             <li>
-                                <form action="/logout" method="POST" id="logoutForm" style="display: none;">
+                                <form action="/logout" method="POST" id="logoutForm">
                                 @csrf
                                     <button type="submit" class="dropdown-item" href="#">Logout</button>
                                 </form>
                             </li>
+                            @endauth
                         </ul>
                     </div>
                     <!-- </div>  -->
@@ -416,10 +418,6 @@
 
         var profile = document.getElementById('profile');
         profile.style.display = 'block';
-
-        var logout = document.getElementById('logoutForm');
-        logout.style.display = 'block';
-
     @endauth
     
 </script>
