@@ -67,15 +67,6 @@
     </div>
     </article>
     @endforeach
-    <!-- <div class="dialog-box">
-      <p class="dialog-text">Percakapan saat berada di taksi online</p>
-    </div>
-    <div class="dialog-box">
-      <p class="dialog-text">Percakapan saat sedang berjalan dan diikuti orang</p>
-    </div>
-    <div class="dialog-box">
-        <p class="dialog-text">Percakapan saat -</p>
-    </div> -->
   </div>
 
 

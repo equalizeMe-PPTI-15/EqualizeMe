@@ -8,6 +8,7 @@ use App\Http\Controllers\DialogController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\NewsEduController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\FaqController;
 
 
 /*
@@ -66,3 +67,5 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/berita', [BeritaController::class, 'index']);
 Route::get('/berita/{id}/data', [BeritaController::class, 'getNewsData'])->name("news");
 // Route::get('/berita/{filtercarinews}', [BeritaController::class, 'searchNews']);
+
+Route::get('faq', [FaqController::class, 'index']);
