@@ -145,13 +145,15 @@
                             @auth
                             <li><a class="dropdown-item" href="/sandi/{{ auth()->user()->id }}">Ubah Sandi</a></li>
                             {{-- <a href="/sandi/{{ $akuns->id }}">Ubah Password</a> --}}
-                            <li>
+
+                            <li><a href="" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</a></li>
+                            
+                            {{-- <li>
                                 <form action="/logout" method="POST" id="logoutForm">
                                 @csrf
                                     <button type="submit" class="dropdown-item" href="#">Logout</button>
                                 </form>
-                            </li>
-                            @endauth
+                            </li> --}}
                         </ul>
                     </div>
                     <!-- </div>  -->
@@ -387,7 +389,27 @@
     </button>
 
 
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Yaqueen mau keluar???</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Hati-hati dengan keluar berarti menyadari sepenuhnya harus login lagi sebelum lapor
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ahh pikir lagi deh</button>
+              <form action="/logout" method="POST" id="logoutForm">
+                @csrf
+                    <button type="submit" class="btn btn-secondary" href="#">Yaqueen dong bang</button>
+                </form>
+              {{-- <button type="button" class="btn btn-primary">Yaqueen dong bang</button> --}}
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 </body>
