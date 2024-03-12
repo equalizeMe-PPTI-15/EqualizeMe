@@ -68,7 +68,7 @@
     </div>
     <div class="buttonsubmit">
         <button type="submit" class="btn btn-primary">Login</button>
-    </div>    
+    </div>  
 </form>
     <div class="divKata">
         <a class="kata">Tidak punya akun? </a>

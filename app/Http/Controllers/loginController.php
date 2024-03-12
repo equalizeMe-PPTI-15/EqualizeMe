@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Session;
 class LoginController extends Controller
 {
     public function authenticate(Request $request){
+        // $request->session()->flush();
         // dd($request);
         $credentials = $request->validate([
             'nik' => 'required|max:16|min:16',
@@ -32,6 +33,7 @@ class LoginController extends Controller
     }
 
     public function index() {
+        // $request->session()->flush();
         return view("login");
     }
 

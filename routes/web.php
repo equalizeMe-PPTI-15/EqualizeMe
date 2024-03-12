@@ -34,20 +34,21 @@ Route::get('/register', [RegisterController::class, 'index']);
 
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/register', function () {
-    return view('register');
-});
+// Route::get('/register', function () {
+//     return view('register');
+// });
+
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+
 Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/login', function () {
+    return view('home');
+})->name('login');
 
-Route::get('/helpme', function () {
-    return view('helpme');
+Route::get('/home', function () {
+    return view('home');
 });
-
-// Route::get('/home', function () {
-//     return view('home');
-// });
 
 // Route::get('/home', [NewsEduController::class, 'index']);
 
@@ -67,12 +68,12 @@ Route::get('/akun', [AkunController::class, 'index']);
 Route::post('/akun/{user}', [AkunController::class, 'store']);
 Route::get('/akun/{user}', [AkunController::class, 'store']);
 
-Route::get('/sandi/{user}', [AkunController::class, 'index2']);
-Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
+// Route::get('/sandi/{user}', [AkunController::class, 'index2']);
+// Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
 
-Route::get('/akun', [AkunController::class, 'index']);
-Route::post('/akun/{user}', [AkunController::class, 'store']);
-Route::get('/akun/{user}', [AkunController::class, 'store']);
+// Route::get('/akun', [AkunController::class, 'index']);
+// Route::post('/akun/{user}', [AkunController::class, 'store']);
+// Route::get('/akun/{user}', [AkunController::class, 'store']);
 
 Route::get('/sandi', [AkunController::class, 'index2']);
 Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
@@ -90,7 +91,7 @@ Route::get('/berita/{id}/data', [BeritaController::class, 'getNewsData'])->name(
 // Route::get('/berita/{filtercarinews}', [BeritaController::class, 'searchNews']);
 
 // Route::get('/berita/search', [BeritaController::class, 'search']);
-Route::post('/logout', [LogoutController::class, 'LogoutUser']);
+// Route::post('/logout', [LogoutController::class, 'LogoutUser']);
 // Route::get('/berita/search', [BeritaController::class, 'search']);
 
 Route::post('/logout', [LogoutController::class, 'LogoutUser']);

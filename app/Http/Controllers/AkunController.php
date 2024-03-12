@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AkunController extends Controller
 {
+
     public function index(){
         return view('akun', [
             "title" => "akun",
@@ -23,6 +25,8 @@ class AkunController extends Controller
     }
 
     public function toSandi(Request $request, User $user){
+
+        // $request->session()->flush();
         if (Hash::check($request['current-password'], $user->password)) {
             $validateData = $request->validate([
                 'new-password' => 'min:5|max:255'
@@ -30,13 +34,36 @@ class AkunController extends Controller
             
             if($request['new-password'] != $request['confirm-password']){
                 return redirect()->back()->withInput()->with('different', 'Konfirmasi Sandi Baru Anda dengan benar');
+                // return view('sandi');
             } else {
-                $user->password = Hash::make($request['new-password']);
-                $user->save();
-                return redirect()->back()->withInput()->with('success', 'Sandi berhasil diubah!');
+                // $user->password = Hash::make($request['new-password']);
+                // $user->save();
+                $user->update([
+                    'email' => 'APHH',
+                    'password' => Hash::make($request['new-password'])
+                ]);
+                
+                if(Auth::check()){
+                    // $request->session()->flush();
+                    return view('sandi', [
+                        "title" => "sandi",
+                        "akuns" => auth()->user()
+                    ]);
+                }else{
+                    dd($user);
+                }
+                
+                
+                // // dd($user);
+                // return view('sandi', [
+                //     "title" => "sandi",
+                //     "akuns" => auth()->user()
+                // ]);
             }
         } else {
             return redirect()->back()->withInput()->with('error', 'Sandi Lama salah!');
+
+            // return view('sandi');
         }
     }
 
