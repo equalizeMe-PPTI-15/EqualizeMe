@@ -144,7 +144,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="/education" class="nav-link active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-book" viewBox="0 0 16 16" alt="Edukasi">
                         <path
@@ -154,7 +154,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/pengaduan" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-exclamation-octagon" viewBox="0 0 16 16" alt="Pengaduan">
                         <path

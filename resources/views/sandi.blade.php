@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href={{ asset("Style/Akun/sandi-style.css") }}>
 </head>
 <body>
+    {{-- $request->session()->flush(); --}}
 	<div class="container">
 		<div class="back">
             <a href="/home"><img src="{{ asset("Image/back.png") }}" alt=""></a>
@@ -15,7 +16,7 @@
         <div class="alertsuccess alert-success">
             {{ session('success') }}
         </div>
-    @endif
+        @endif
     <br>
     <br>
         <div class="nama">
@@ -28,17 +29,18 @@
 		    <p>Kata sandi harus lebih dari empat karakter. Pastikan menulis kata sandi lama dengan benar dan 
                 pastikan untuk melakukan konfirmasi kata sandi baru dengan tepat.
             </p>
-            <form method="post" action="/sandi/{{ $akuns->id }}">
+            {{-- <form method="post" action="/sandi/{{ $akuns->id }}"> --}}
+            <form method="post" action="/sandi">
             @csrf
                 <label for="current-password">Kata Sandi Lama</label>
                 <input type="password" id="current-password" placeholder="Kata Sandi Lama" 
                 name="current-password" value="" required>
                 @if(session('error'))
-                <div class="alert alert-danger">
-                    {{ session('error') }}
-                    <br><br>
-                </div>
-            @endif
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                        <br><br>
+                    </div>
+                @endif
                 <label for="new-password">Kata Sandi Baru</label>
                 <input type="password" id="new-password" placeholder="Kata Sandi Baru" 
                 name="new-password" value="" class="form-control @error('new-password') is-invalid @enderror" required>
@@ -53,10 +55,10 @@
                 name="confirm-password" value="" required>
                 
                 @if(session('different'))
-                <div class="alert alert-danger">
-                    {{ session('different') }}
-                </div>
-            @endif
+                    <div class="alert alert-danger">
+                        {{ session('different') }}
+                    </div>
+                @endif
                 <!-- <p><a href="#">Lupa Kata Sandi?</a></p> -->
                 <div class="buttonsubmit">
                     <button type="submit">Ubah Kata Sandi</button>
