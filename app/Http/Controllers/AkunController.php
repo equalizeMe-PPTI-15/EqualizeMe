@@ -39,7 +39,7 @@ class AkunController extends Controller
             return redirect()->back()->withInput()->with('error', 'Sandi Lama salah!');
         }
     }
-
+    
     public function store(Request $request, User $user){
         // dd($user);
         if(!request('notelp')){
