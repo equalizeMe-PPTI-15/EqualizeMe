@@ -100,6 +100,10 @@
                     @enderror
                 </div>
                 <!-- button -->
+
+                show the relation between the user and the report
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+
                 <div class="container-button-pengaduan">
                     <button type="submit" class="button-kirim mt-0" onclick="restoreValue()">Kirim</button>
                 </div>
