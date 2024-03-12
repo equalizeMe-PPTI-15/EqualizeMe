@@ -26,9 +26,8 @@ use App\Http\Controllers\EducationController;
 */
 
 // NOTE: Rapihin route nya yang duplicate
-Route::get('/', function () {
-    return view('/home');
-});
+// Auth::routes();
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/register', [RegisterController::class, 'index']);
 
@@ -38,8 +37,8 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 
 Route::get('/helpme', function () {
     return view('helpme');
@@ -71,10 +70,7 @@ Route::get('/akun/{user}', [AkunController::class, 'store']);
 Route::get('/sandi/{user}', [AkunController::class, 'index2']);
 Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
 
-// Route::get('/home', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-// Route::get('/home', [NewsEduController::class, 'index'])->name('home');
 
 // Route::resource('berita', BeritaController::class);
 
@@ -84,7 +80,5 @@ Route::get('/berita/{id}/data', [BeritaController::class, 'getNewsData'])->name(
 // Route::get('/berita/{filtercarinews}', [BeritaController::class, 'searchNews']);
 
 // Route::get('/berita/search', [BeritaController::class, 'search']);
-Route::post('/logout', [LogoutController::class, 'LogoutUser']);
-// Route::get('/berita/search', [BeritaController::class, 'search']);
-
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 Route::post('/logout', [LogoutController::class, 'LogoutUser']);
