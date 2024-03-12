@@ -33,12 +33,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Registrasi</h1>
+        <h1>Masuk</h1>
         <form action="/register" method="post">
         @csrf
     <div class="form-group">   
     <label for="name">Nama Lengkap</label> 
-    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required value="{{ old('name') }}">
+    <input autocomplete="off" type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required value="{{ old('name') }}">
         @error('name')
       <div class="invalid-feedback">
        {{ $message }}
@@ -51,7 +51,7 @@
     
             
     <label for="nik">NIK</label> 
-    <input type="number" class="form-control @error('nik') is-invalid @enderror" id="nik" name="nik" required value="{{ old('nik') }}">
+    <input autocomplete="off" type="number" class="form-control @error('nik') is-invalid @enderror" id="nik" name="nik" required value="{{ old('nik') }}">
         @error('nik')
       <div class="invalid-feedback">
         {{ $message }}
@@ -65,7 +65,7 @@
     
             
     <label for="phoneNumber">No. telp</label>
-    <input type="number" class="form-control @error('phoneNumber') is-invalid @enderror" id="phoneNumber" name="phoneNumber" required value="{{ old('phoneNumber') }}">
+    <input autocomplete="off" type="number" class="form-control @error('phoneNumber') is-invalid @enderror" id="phoneNumber" name="phoneNumber" required value="{{ old('phoneNumber') }}">
         @error('phoneNumber')
       <div class="invalid-feedback">
         {{ $message }}
@@ -76,7 +76,7 @@
           
     <div class="form-group">   
     <label for="email">Email</label> 
-    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" required value="{{ old('email') }}">
+    <input autocomplete="off" type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" required value="{{ old('email') }}">
     @error('email')
       <div class="invalid-feedback">
         {{ $message }}
@@ -105,7 +105,7 @@
 
     <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required>
+    <input autocomplete="off" type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required>
     @error('password')
       <div class="invalid-feedback">
         {{ $message }}

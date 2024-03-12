@@ -55,7 +55,7 @@ class AkunController extends Controller
             return redirect()->back()->with('success', 'Sandi berhasil diubah!');
         }   
     }
-
+    
     public function store(Request $request, User $user){
         // dd($user);
         if(!request('notelp')){

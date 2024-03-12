@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="buttonsubmit">
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary btn-temp">Login</button>
     </div>  
 </form>
     <div class="divKata">

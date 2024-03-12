@@ -70,6 +70,7 @@
     <nav class="nav_atas">
         <div class="nav-inner-left">
             <div class="dflex nav-content-inner">
+                @guest
                 <li>
                     <div class="icon-profile-r">
                         <div class="dropdown" id="dropdown">
@@ -83,7 +84,7 @@
                         </div>
                     </div>
                 </li>
-
+                @endguest
                 @auth 
                 <li>
                     <div id="profile" class="icon-profile" style="display: none;">
@@ -99,7 +100,7 @@
                 </li>
                 @endauth
 
-                @guest
+                @auth
                 <li>
                     <div id="profile" class="icon-profile" style="display: none;">
                         <a href="/akun">
@@ -107,7 +108,7 @@
                         </a>
                     </div>
                 </li>
-                @endguest
+                @endauth
 
                 @auth
                 <li>
@@ -130,9 +131,9 @@
             <div class="dflex nav-content-inner-right">
                 <li>
                     <!-- <div class="icon-profile-r"> -->
-                    <div class="dropdown" id="dropdown">
+                    <div class="dropdown" id="dropdownSettings">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" 
                                 class="bi bi-gear" viewBox="0 0 16 16">
                                 <path
                                     d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
@@ -141,20 +142,21 @@
                             </svg>
                     </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">FAQ</a></li>
+                            <li><a class="dropdown-item" href="/faq">FAQ</a></li>
                             @auth
                             <li><a class="dropdown-item" href="/sandi/{{ auth()->user()->id }}">Ubah Sandi</a></li>
                             {{-- <a href="/sandi/{{ $akuns->id }}">Ubah Password</a> --}}
 
                             <li><a href="" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</a></li>
                             @endauth
+                            @endauth
                             {{-- <li>
                                 <form action="/logout" method="POST" id="logoutForm">
                                 @csrf
                                     <button type="submit" class="dropdown-item" href="#">Logout</button>
                                 </form>
-                            </li>
-                            --}}
+                            </li> --}}
+                        
                         </ul>
                     </div>
                     <!-- </div>  -->
@@ -401,7 +403,7 @@
               Hati-hati dengan keluar berarti menyadari sepenuhnya harus login lagi sebelum lapor
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ahh pikir lagi deh</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:red;">Ahh pikir lagi deh</button>
               <form action="/logout" method="POST" id="logoutForm">
                 @csrf
                     <button type="submit" class="btn btn-secondary" href="#">Yaqueen dong bang</button>

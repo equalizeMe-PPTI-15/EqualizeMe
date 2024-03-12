@@ -101,6 +101,8 @@ body{
     width: 100%;
     color: white;
     /* border: solid blue; */
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .icon-profile img{
@@ -221,3 +223,10 @@ body{
 }
 
 /* carousell */
+.dropdown-item:hover{
+    background-color: #03848F;
+    color: white;
+    border-radius: 6px;
+    
+    /* width: 100%; */
+}

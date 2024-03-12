@@ -41,7 +41,8 @@
   }
   
   .btn-primary {
-    background-color: #65CAD1;
+    background-color: #03848F;
+
   }
   
   .divKata{
@@ -54,11 +55,15 @@
     color: black;
   }
   .kata-login{
-    color: red;
+    color: blue;
   }
 
   .buttonsubmit{
     align-items: center;
     text-align: center;
     
+  }
+  .btn-temp:hover{
+    background-color: #65CAD1;
+
   }

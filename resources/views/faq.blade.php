@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EqualizeMe-FAQ</title>
     <link rel="stylesheet" href="{{ asset('Style/Faq/faq.css') }}">
+       <!-- font -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <style>
+        * {
+            font-family: 'Quicksand', 'Amaranth', cursive, Arial, sans-serif;
+        }
+        
+    </style>
 </head>
 <body>
     <div class="container">
