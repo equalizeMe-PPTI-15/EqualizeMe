@@ -31,7 +31,7 @@
 <body>
     <!-- content -->
     @if(session()->has('reported'))
-    <div class="alert alert-success alert-disissible fade show" role="alert" id="msgAlert">
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="msgAlert">
         {{ session('reported') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
@@ -73,7 +73,7 @@
                     @enderror
                     <!-- <input type="text" class="form-control" id="tanggal" name="tanggal" placeholder="Waktu Kejadian"> -->
                     <!-- <input type="text" class="form-control" id="deskripsi" name="deskripsi"  placeholder="Deskripsi / Penjelasan Kejadian"> -->
-                    <textarea name="description" id="deskripsi" placeholder="Deskripsi / Penjelasan Kejadian" cols="30" rows="10" required value="{{ old('description') }}"> {{ trim(htmlspecialchars(old('description',''))) }} </textarea>
+                    <textarea name="description" id="deskripsi" placeholder="Deskripsi / Penjelasan Kejadian" cols="30" rows="10" required value="{{ old('description') }}"></textarea>
                     @error('description')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -151,6 +151,7 @@
 
     <!-- script -->
     <script src="../../JS/pengaduan/script-upload-file.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
