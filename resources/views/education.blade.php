@@ -101,7 +101,7 @@
                 <button class="button-kembali" onclick="toggle_popup({{ $edu->idEducation }})">Kembali</button>
 
                 <a href="/quiz{{$edu->idEducation}}">
-                    <button class="button-quiz">Quiz</button>
+                    <button class="button-quiz">Kuis</button>
                 </a>
             </div>
         </div>

@@ -379,7 +379,7 @@
     
     
                 <a href="#">
-                    <button class="button-quiz">Quiz</button>
+                    <button class="button-quiz">Kuis</button>
                 </a>
             </div>
         </div>

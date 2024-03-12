@@ -27,7 +27,7 @@
 
     <link rel="website icon" type="png" href="Image/logo.jpg">
     <link rel="stylesheet" href="Style/RegisterLogin/regisnlogin.css"> 
-        <title>EqualizeMe-Login</title>
+        <title>EqualizeMe-Masuk</title>
 
 </head>
 <body>
@@ -39,7 +39,7 @@
     @endif --}}
 
 <div class="container">
-    <h1>Login</h1>
+    <h1>Masuk</h1>
     <form action="/login" method="post">
     @csrf
     
@@ -54,7 +54,7 @@
 
         
     <label for="nik">NIK</label> 
-    <input type="number" class="form-control @error('nik') is-invalid @enderror" id="nik" name="nik" autofocus required value="{{ old('nik') }}">
+    <input type="number" class="form-control @error('nik') is-invalid @enderror" id="nik" name="nik" autofocus required value="{{ old('nik') }}" placeholder="Wajib 16 digit angka">
         @error('nik')
         <div class="invalid-feedback">
             {{ $message }}
@@ -63,8 +63,8 @@
     </div>
           
     <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required>
+    <label for="password">Sandi</label>
+    <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required placeholder="Min. 5">
         @error('password')
         <div class="invalid-feedback">
             {{ $message }}
@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="buttonsubmit">
-        <button type="submit" class="btn btn-primary btn-temp">Login</button>
+        <button type="submit" class="btn btn-primary btn-temp">Masuk</button>
     </div>  
 </form>
     <div class="divKata">
@@ -82,5 +82,20 @@
     </div>
     
   </div>
+  <script>
+    document.getElementById('nik').addEventListener('input', function (e) {
+        if (this.value.length > 16) {
+            this.value = this.value.slice(0, 16); 
+        }
+    });
+    // create validation of nik input without e and -
+    document.getElementById('nik').addEventListener('keypress', function (e) {
+        if (e.key === 'e' || e.key === '-') {
+            e.preventDefault();
+        }
+    });
+
+
+  </script>
 </body>
 </html>

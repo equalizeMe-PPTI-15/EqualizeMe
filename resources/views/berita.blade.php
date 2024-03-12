@@ -68,7 +68,7 @@
     <!-- statistik -->
     <div class="container-statistik">
         <div class="banner-h3">
-            <h3>Statistik Presentase Pelecehan Seksual</h3>
+            <h3>Statistik Presentasi Pelecehan Seksual</h3>
         </div>
         <div class="banner-img-statistik">
             <img src="../../Image/412503.jpg" alt=""

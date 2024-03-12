@@ -75,7 +75,6 @@
                         var imageAkunContainer = document.getElementById('imageAkunContainer');
                         var imageUrl;
                         @if ($akuns->picture != 'akun1.png')
-                            // alert('hai');
                             imageUrl = "{{ asset('storage/'. $akuns->picture) }}";
                         @else
                             imageUrl = "../../Image/{{ $akuns->picture }}";
