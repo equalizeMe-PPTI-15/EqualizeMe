@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Edukasi</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaduan</title>
     <!-- bootstrap -->
     <link href="../../Style/bootstrap/bootstrap.min.css" rel="stylesheet">
 
@@ -16,15 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-
-    <!-- pencarian -->
-    <link rel="stylesheet" href="../../Style/Edu/wrapper_Edu.css">
-
-    <!-- popup -->
-    <link rel="stylesheet" href="../../Style/Edu/popup_edu.css">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../Style/Edu/style_edu.css">
+    <link rel="stylesheet" href="../../Style/Pengaduan/style-pengaduan.css">
 
     <style>
         * {
@@ -34,80 +24,79 @@
         html {
             scroll-behavior: smooth;
         }
+        
     </style>
 
     <link rel="website icon" type="png" href="../../Image/logo.jpg">
 </head>
-
 <body>
-    <!-- Pencarian -->
-    <div class="container-wrapper"
-        style="box-sizing: border-box;  margin-bottom: 2vh;">
-        <div class="search_wrap search_wrap_2" style="border:0.2px solid grey; border-radius: 3px;">
-            <form action="/education">
-                <div class="search_box">
-                        <button class="btn btn_common" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    <input type="text" class="input" placeholder="Pencarian..." name="filtercari" 
-                    value="{{ request('filtercari') }}">
-                </div>
-            </form>
-        </div>
+    <!-- content -->
+    @if(session()->has('reported'))
+    <div class="alert alert-success alert-disissible fade show" role="alert" id="msgAlert">
+        {{ session('reported') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
+
+    <div class="belumLogin" id="belumLogin">
+        <p>Silakan register terlebih dahulu</p>
+        <a href="/register">Register</a>
+        <p>Sudah punya akun?</p>
+        <a href="/login">Login</a>
     </div>
 
-
-    <!-- content edu -->
-    <div class="container-edu">
-        <div class="content-edu">
-            @if ($educations->first() != null)
-                @foreach ($educations as $edu)
-                <a href="#" onclick="toggle_popup({{ $edu->idEducation }})">
-                    <div class="row-edu">
-                        <div class="gambar-content">
-                            <img src="../../Image/{{ $edu->gambarEducation }}" alt="">
-                        </div>
-                        <div class="content-edu-h6">
-                            <h6>{{ $edu->educationTitle }}</h6>
-                        </div>
+    <form action="/pengaduan" method="post" enctype="multipart/form-data" id="formPengaduan" style="display:none;">
+        @csrf
+        <div class="container-content-pengaduan">
+            <div class="container-upload-file">
+                <label for="input-file" id="drop-area">
+                    <input type="file" id="input-file" class="form-control @error('input-file') is-invalid @enderror" accept="image/*, video/*" name="input-file" hidden value= "{{ old('input-file') }}">
+                    <div id="img-view">
+                        <p>Drag atau Masukkan<br> Image/Video</p>
+                        <!-- <span>upload any images from desktop</span> -->
                     </div>
-                </a>
-                @endforeach
-            @else
-                <h5 style="text-align: center">pencarian '{{ request('filtercari') }}' tidak ditemukan</h5>
-            @endif
-        </div>
-
-        
-    </div>
-
-
-    <!-- popup edu-->
-    @foreach ($educations as $edu)
-        <div class="popup_edu" id="popup{{ $edu->idEducation }}">
-            <h2>{{ $edu->educationTitle }}</h2>
-            <!-- <iframe src="../../Image/412503.jpg" ></iframe> -->
-            <div class="content-text-popup">
-                <video class="w-100" controls="true">
-                    <source src="../../Image/{{ $edu->videoEducation }}">
-                </video>
-                <!-- <img src="../../Image/412503.jpg" alt=""> -->
-                <!-- <iframe src="https://www.youtube.com/watch?v=pQr4O1OITJo&t=196s" frameborder="0" width="400" height="200"></iframe> -->
-                <!-- <iframe src="https://youtu.be/BFu8Kd_QfGI?si=TQ0k51ThlBIBFkl_" frameborder="0" width="100%" height="200" allowfullscreen></iframe> -->
-                <p>{!! $edu->educationContent !!}</p>
+                    @error('input-file')
+                    <div class="invalid-feedback mt-3">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </label>
             </div>
-            <div class="content-button">
-
-                <button class="button-kembali" onclick="toggle_popup({{ $edu->idEducation }})">Kembali</button>
-
-                <a href="#">
-                    <button class="button-quiz">Quiz</button>
-                </a>
+            <div class="container-form-pengaduan">
+                <!-- <h1 class="title-pengaduan">Pengaduan</h1> -->
+                <div class="form-group mt-4">
+                    <!-- <label for="nama"></label> -->
+                    <input type="text" class="form-control" id="nama" name="incidentAddress" placeholder="Tempat Kejadian" required value="{{ old('incidentAddress') }}">
+                    @error('incidentAddress')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                    <!-- <label for=""></label> -->
+                    <input type="date" class="form-control" id="tanggal" name="dateOfIncident" placeholder="Waktu Kejadian" required value="{{ old('dateOfIncident') }}">
+                    @error('dateOfIncident')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                    <!-- <input type="text" class="form-control" id="tanggal" name="tanggal" placeholder="Waktu Kejadian"> -->
+                    <!-- <input type="text" class="form-control" id="deskripsi" name="deskripsi"  placeholder="Deskripsi / Penjelasan Kejadian"> -->
+                    <textarea name="description" id="deskripsi" placeholder="Deskripsi / Penjelasan Kejadian" cols="30" rows="10" required value="{{ old('description') }}"></textarea>
+                    @error('description')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <!-- button -->
+                <div class="container-button-pengaduan">
+                    <button type="submit" class="button-kirim mt-0" onclick="restoreValue()">Kirim</button>
+                </div>
             </div>
         </div>
-    @endforeach
+    </form>    
 
-    <!-- Navbar Bawah -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand navbar-dark bg-primary text-white fixed-bottom">
         <ul class="navbar-nav nav-justified w-100 ">
             <li class="nav-item">
@@ -144,7 +133,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="/education" class="nav-link active">
+                <a href="/education" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-book" viewBox="0 0 16 16" alt="Edukasi">
                         <path
@@ -154,7 +143,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/pengaduan" class="nav-link">
+                <a href="/pengaduan" class="nav-link active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-exclamation-octagon" viewBox="0 0 16 16" alt="Pengaduan">
                         <path
@@ -168,14 +157,25 @@
         </ul>
     </nav>
 
-    <script type="text/javascript">
-        function toggle_popup(id) {
-            var popup = document.getElementById('popup' + id)
-            popup.classList.toggle('active')
-        }
-    </script>
+    <!-- script -->
+    <script src="../../JS/pengaduan/script-upload-file.js"></script>
 </body>
-<!-- script in html -->
-<!-- <script type="text/javascript" src="../../JS/Template/scrolltopbtn.js"></script> -->
+
+</script>
+
+<!-- script register login -->
+<script>
+    
+    @auth
+        var div = document.getElementById('belumLogin');
+        if(div) {
+            div.style.display = 'none';
+        }
+        var pengaduan = document.getElementById('formPengaduan');
+        pengaduan.style.display = 'block';
+
+    @endauth
+    
+</script>
 
 </html>

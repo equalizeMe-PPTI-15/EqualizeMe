@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Auth;
 
 class LogoutController extends Controller
 {
-    public function LogoutUser() {
+    public function LogoutUser(Request $request) {
+        $request->session()->flush();
         Auth::logout();
         return redirect('/home');
     }

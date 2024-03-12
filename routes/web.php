@@ -10,6 +10,8 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\NewsEduController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\quizController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\FaqController;
 
@@ -26,9 +28,8 @@ use App\Http\Controllers\FaqController;
 */
 
 // NOTE: Rapihin route nya yang duplicate
-Route::get('/', function () {
-    return view('register');
-});
+// Auth::routes();
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/register', [RegisterController::class, 'index']);
 
@@ -45,6 +46,8 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/login', function () {
     return view('home');
 })->name('login');
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 
 Route::get('/home', function () {
     return view('home');
@@ -56,6 +59,11 @@ Route::get('/berita', function () {
     return view('berita');
 });
 
+Route::get('/pengaduan', [ReportController::class, 'index']);
+Route::post('/pengaduan', [ReportController::class, 'store']);
+Route::get('/sandi', function(){
+    return view('sandi');
+});
 Route::get('/education', [EducationController::class, 'index']);
 // Route::get('/sandi', function(){
 //     return view('sandi');
@@ -70,6 +78,7 @@ Route::get('/akun/{user}', [AkunController::class, 'store']);
 
 // Route::get('/sandi/{user}', [AkunController::class, 'index2']);
 // Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
+Route::get('/quiz', [quizController::class, 'index']);
 
 // Route::get('/akun', [AkunController::class, 'index']);
 // Route::post('/akun/{user}', [AkunController::class, 'store']);
@@ -78,10 +87,7 @@ Route::get('/akun/{user}', [AkunController::class, 'store']);
 Route::get('/sandi', [AkunController::class, 'index2']);
 Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
 
-// Route::get('/home', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-// Route::get('/home', [NewsEduController::class, 'index'])->name('home');
 
 // Route::resource('berita', BeritaController::class);
 
