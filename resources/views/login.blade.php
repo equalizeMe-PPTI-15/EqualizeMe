@@ -31,6 +31,12 @@
 
 </head>
 <body>
+    {{-- @if(Auth::check())
+    @php
+    $redirectTo = route('home');
+    @endphp
+    <script>window.location = "{{ $redirectTo }}";</script>
+    @endif --}}
 
 <div class="container">
     <h1>Login</h1>

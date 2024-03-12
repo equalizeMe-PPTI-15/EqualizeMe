@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Session;
 class LoginController extends Controller
 {
     public function authenticate(Request $request){
+        // Session::flush();
         // $request->session()->flush();
         // dd($request);
         $credentials = $request->validate([
@@ -33,6 +34,7 @@ class LoginController extends Controller
     }
 
     public function index() {
+        // Session::flush();
         // $request->session()->flush();
         return view("login");
     }

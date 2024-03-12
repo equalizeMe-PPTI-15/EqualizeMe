@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href={{ asset("Style/Akun/sandi-style.css") }}>
 </head>
 <body>
-    $request->session()->flush();
+    {{-- $request->session()->flush(); --}}
 	<div class="container">
 		<div class="back">
             <a href="/home"><img src="{{ asset("Image/back.png") }}" alt=""></a>
@@ -16,7 +16,7 @@
         <div class="alertsuccess alert-success">
             {{ session('success') }}
         </div>
-    @endif
+        @endif
     <br>
     <br>
         <div class="nama">
@@ -29,7 +29,8 @@
 		    <p>Kata sandi harus lebih dari empat karakter. Pastikan menulis kata sandi lama dengan benar dan 
                 pastikan untuk melakukan konfirmasi kata sandi baru dengan tepat.
             </p>
-            <form method="post" action="/sandi/{{ $akuns->id }}">
+            {{-- <form method="post" action="/sandi/{{ $akuns->id }}"> --}}
+            <form method="post" action="/sandi">
             @csrf
                 <label for="current-password">Kata Sandi Lama</label>
                 <input type="password" id="current-password" placeholder="Kata Sandi Lama" 

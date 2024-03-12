@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -24,47 +25,35 @@ class AkunController extends Controller
         ]);
     }
 
-    public function toSandi(Request $request, User $user){
+    public function gantiSandi(Request $hehe){
+        // Validate the request
+        $validator = Validator::make($hehe->all(), [
+            'new-password' => 'min:5|max:255'
+        ]);
 
-        // $request->session()->flush();
-        if (Hash::check($request['current-password'], $user->password)) {
-            $validateData = $request->validate([
-                'new-password' => 'min:5|max:255'
-            ]);
-            
-            if($request['new-password'] != $request['confirm-password']){
+        // If validation fails, redirect back with errors
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        // Get the current authenticated user
+        $user = Auth::user();
+
+        // Check if the current password matches the user's password in the database
+        if (!Hash::check($hehe['current-password'], $user->password)) {
+            return redirect()->back()->withInput()->with('error', 'Sandi Lama salah!');
+        }else{
+            // Update the user's password
+            if($hehe['new-password'] != $hehe['confirm-password']){
                 return redirect()->back()->withInput()->with('different', 'Konfirmasi Sandi Baru Anda dengan benar');
                 // return view('sandi');
-            } else {
-                // $user->password = Hash::make($request['new-password']);
-                // $user->save();
-                $user->update([
-                    'email' => 'APHH',
-                    'password' => Hash::make($request['new-password'])
-                ]);
-                
-                if(Auth::check()){
-                    // $request->session()->flush();
-                    return view('sandi', [
-                        "title" => "sandi",
-                        "akuns" => auth()->user()
-                    ]);
-                }else{
-                    dd($user);
-                }
-                
-                
-                // // dd($user);
-                // return view('sandi', [
-                //     "title" => "sandi",
-                //     "akuns" => auth()->user()
-                // ]);
             }
-        } else {
-            return redirect()->back()->withInput()->with('error', 'Sandi Lama salah!');
 
-            // return view('sandi');
-        }
+            $user->password = Hash::make($hehe['new-password']);
+            $user->save();
+            // Redirect the user with success message
+            return redirect()->back()->with('success', 'Sandi berhasil diubah!');
+        }   
     }
 
     public function store(Request $request, User $user){
