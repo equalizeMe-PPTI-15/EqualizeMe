@@ -73,7 +73,7 @@
                     @enderror
                     <!-- <input type="text" class="form-control" id="tanggal" name="tanggal" placeholder="Waktu Kejadian"> -->
                     <!-- <input type="text" class="form-control" id="deskripsi" name="deskripsi"  placeholder="Deskripsi / Penjelasan Kejadian"> -->
-                    <textarea name="description" id="deskripsi" placeholder="Deskripsi / Penjelasan Kejadian" cols="30" rows="10" required value="{{ old('description') }}"></textarea>
+                    <textarea name="description" id="deskripsi" placeholder="Deskripsi / Penjelasan Kejadian" cols="30" rows="10" required value="{{ old('description') }}"> {{ trim(htmlspecialchars(old('description',''))) }} </textarea>
                     @error('description')
                     <div class="invalid-feedback">
                         {{ $message }}
