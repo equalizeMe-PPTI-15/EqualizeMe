@@ -120,7 +120,7 @@
             <img src="" id="popup-image" alt="">
             <p id="popup-content"> </p>
         </div>
-        <button class="button-selengkapnya" onclick="toggle_popup()">Kembali</button>x
+        <button class="button-selengkapnya" onclick="toggle_popup()">Kembali</button>
     </div>
 
     <!-- pagination -->

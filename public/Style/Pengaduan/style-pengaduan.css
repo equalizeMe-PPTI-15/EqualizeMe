@@ -120,8 +120,8 @@
 .button-kirim{
     border: none;
     font-size: 16px;
-    color: #000;
-    font-weight: bold;
+    color: #fff;
+    font-weight: 600;
     padding: 6px 16px;
     width: 35%;
     background-color: rgb(101, 202, 209);
@@ -133,4 +133,86 @@
 }
 .button-kirim:hover{
     background: #CDF0F3;
+}
+
+/* validation akun */
+.belumLogin{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-belumlogin{
+    height: 70vh;
+    width: 95%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(118, 118, 118, 0.147);
+    box-shadow:  0.5em 0.1em 1em rgb(0, 0, 0);
+    
+}
+.container-regist{
+    padding: 2% 5%;
+    height: 20vh;
+    width: 80%;
+    border-radius: 6px;
+    background-color: #03848F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 5%;
+    border: .1px solid grey;
+    transition: 0.5s;
+    color: white;
+    text-align: center;
+}   
+.container-log{
+    border: .1px solid grey;
+    background-color: #03848F;
+    color: white;
+    padding: 2% 5%;
+    height: 20vh;
+    width: 80%;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.5s;
+}  
+.temp-cont {
+    background-color: #fff;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    border-radius:  20px;
+    transition: .5s;
+}
+.temp-cont a{
+    text-decoration: none;
+    color: #03848F;
+}
+   
+    .container-regist .temp-cont a:hover, .container-log .temp-cont a:hover{
+    color: #fff;
+    transition: 0.5s;
+    background-color: #65CAD1;
+    width: 100%;
+    height: 5vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -38,9 +38,9 @@ Route::get('/register', [RegisterController::class, 'index']);
 
 Route::post('/register', [RegisterController::class, 'store']);
 
-// Route::get('/register', function () {
-//     return view('register');
-// });
+Route::get('/register', function () {
+    return view('register');
+});
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
 
@@ -68,16 +68,12 @@ Route::get('/education', [EducationController::class, 'index']);
 Route::get('/helpme', [DialogController::class,'index']);
 Route::get('/helpme2/{dialog}', [DialogController::class,'show']);
 
-Route::get('/akun', [AkunController::class, 'index']);
-Route::post('/akun/{user}', [AkunController::class, 'store']);
-Route::get('/akun/{user}', [AkunController::class, 'store']);
-
-Route::get('/quiz', [quizController::class, 'index']);
+Route::get('/quiz1', [quizController::class, 'index']);
 
 Route::post('/sandi', [AkunController::class, 'gantiSandi']);
 Route::get('/sandi/{user}', [AkunController::class, 'index2']);
 
-Route::get('/quiz', [quizController::class, 'index']);
+Route::get('/quiz1', [quizController::class, 'index']);
 Route::get('/quiz2', function () {
     return view ('quiz2');
 });
@@ -92,10 +88,8 @@ Route::get('/akun', [AkunController::class, 'index']);
 Route::post('/akun/{user}', [AkunController::class, 'store']);
 Route::get('/akun/{user}', [AkunController::class, 'store']);
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/sandi', [AkunController::class, 'index2']);
-    Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
-});
+Route::get('/sandi', [AkunController::class, 'index2']);
+Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
 
 // Route::get('/home', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index'])->name('home');

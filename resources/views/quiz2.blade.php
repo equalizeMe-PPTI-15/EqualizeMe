@@ -38,7 +38,7 @@
 <body>
     <div class="icon-back-container w-100">
         <div class="temp-icon">
-            <a href="../../HTML/Project-HTML/edu.html" class="icon-back">
+            <a href="/education" class="icon-back">
                 <i class="fa fa-arrow-left"></i>
             </a>
         </div>

@@ -39,10 +39,21 @@
     @endif
 
     <div class="belumLogin" id="belumLogin">
-        <p>Silakan register terlebih dahulu</p>
-        <a href="/register">Register</a>
-        <p>Sudah punya akun?</p>
-        <a href="/login">Login</a>
+        <div class="container-belumlogin">
+            <div class="container-regist">
+                <p>Silakan masuk terlebih dahulu</p>
+                <div class="temp-cont">
+                    <a href="/login">Masuk</a>
+                </div>
+            </div>
+            <!-- <br><br> -->
+            <div class="container-log">
+                <p>Belum Punya Akun?</p>
+                <div class="temp-cont">
+                    <a href="/register">Daftar</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <form action="/pengaduan" method="post" enctype="multipart/form-data" id="formPengaduan" style="display:none;">
@@ -52,7 +63,7 @@
                 <label for="input-file" id="drop-area">
                     <input type="file" id="input-file" class="form-control @error('input-file') is-invalid @enderror" accept="image/*, video/*" name="input-file" hidden value= "{{ old('input-file') }}">
                     <div id="img-view">
-                        <p>Drag atau Masukkan<br> Image/Video</p>
+                        <p>Masukkan<br> Gambar/Video</p>
                         <!-- <span>upload any images from desktop</span> -->
                     </div>
                     @error('input-file')
@@ -66,7 +77,7 @@
                 <!-- <h1 class="title-pengaduan">Pengaduan</h1> -->
                 <div class="form-group mt-4">
                     <!-- <label for="nama"></label> -->
-                    <input type="text" class="form-control" id="nama" name="incidentAddress" placeholder="Tempat Kejadian (ex : Jl. ..., Kec. ..., Kab ..., Kota ..." required value="{{ old('incidentAddress') }}">
+                    <input autocomplete="off" type="text" class="form-control" id="nama" name="incidentAddress" placeholder="Tempat Kejadian (ex : Jl. ..., Kec. ..., Kab ..., Kota ..." required value="{{ old('incidentAddress') }}">
                     @error('incidentAddress')
                     <div class="invalid-feedback">
                         {{ $message }}
