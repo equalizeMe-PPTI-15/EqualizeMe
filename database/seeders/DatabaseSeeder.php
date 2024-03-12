@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Dialog;
 use App\Models\User;
 use App\Models\News;
+use App\Models\Faq;
 use App\Models\Education;
 
 class DatabaseSeeder extends Seeder
@@ -231,5 +232,59 @@ class DatabaseSeeder extends Seeder
             'gambarEducation' => 'imgEdu4.png',
             'videoEducation' => "edu4.mp4"
         ]);
+
+        Faq::create([
+            'Pertanyaan' => "Apa itu Equalize Me?",
+            'Jawaban' => "Equalize Me adalah sebuah aplikasi yang dirancang untuk membantu pengguna menghindari pelecahan seksual dan kekerasan seksual. Aplikasi ini dilengkapi dengan tombol alarm darurat yang dapat diaktifkan pengguna untuk memicu suara peringatan dan fitur pelaporan untuk memberikan dukungan kepada korban."
+        ]);
+
+        Faq::create([
+            'Pertanyaan' => 'Bagaimana cara menggunakan EqualizeMe?',
+            'Jawaban' => 'EqualizeMe adalah aplikasi yang memungkinkan pengguna untuk mengetahui seberapa besar kesehatan mental mereka. 
+            Pengguna dapat mengisi kuesioner yang akan menilai kesehatan mental mereka. Setelah itu, pengguna akan mendapatkan 
+            hasil yang menunjukkan seberapa besar kesehatan mental mereka. EqualizeMe juga menyediakan fitur-fitur yang dapat 
+            membantu pengguna untuk meningkatkan kesehatan mental mereka.'
+        ]);
+        
+        Faq::create([
+            'Pertanyaan' => 'Bagaimana Tombol Alarm Bekerja?',
+            'Jawaban' => 'Tombol alarm di Equalize Me dirancang sebagai mekanisme darurat. Saat ditekan, tombol tersebut akan memicu suara peringatan yang dapat menarik perhatian orang di sekitar dan meminta bantuan.'
+        ]);
+
+        Faq::create([
+            'Pertanyaan' => 'Bagaimana Saya Mengaktifkan Tombol Alarm?',
+            'Jawaban' => 'Anda dapat mengaktifkan tombol alarm dengan membuka aplikasi Equalize Me dan menekan tombol alarm yang tersedia di antarmuka utama.'
+        ]);
+
+        Faq::create([
+            'Pertanyaan' => 'Apa Fungsi Fitur Pelaporan?',
+            'Jawaban' => 'Fitur pelaporan memungkinkan pengguna untuk mengirimkan bukti dengan bentuk foto atau video serta deskripsi tempat kejadian. Ini membantu korban kekerasan seksual dalam memberikan informasi yang dapat membantu pihak berwenang.'
+        ]);
+
+        Faq::create([
+            'Pertanyaan' => 'Bagaimana Saya Menggunakan Fitur Pelaporan?',
+            'Jawaban' => 'Untuk menggunakan fitur pelaporan, buka aplikasi Equalize Me dan pilih opsi pelaporan. Ikuti panduan untuk mengunggah foto atau video, dan berikan deskripsi detail tentang kejadian serta lokasinya.'
+        ]);
+
+        Faq::create([
+            'Pertanyaan' => 'Bagaimana Keamanan Data Saya Terjamin dalam Fitur Pelaporan?',
+            'Jawaban' => 'Equalize Me menggunakan langkah-langkah keamanan tinggi untuk melindungi data pengguna. Semua informasi yang dikirimkan melalui fitur pelaporan akan dienkripsi dan hanya dapat diakses oleh pihak berwenang.'
+        ]);
+
+        Faq::create([
+            'Pertanyaan' => 'Bagaimana Equalize Me Mendukung Korban Setelah Melapor?',
+            'Jawaban' => 'Equalize Me menyediakan informasi dan sumber daya untuk mendukung korban setelah melapor. Ini termasuk kontak dengan organisasi bantuan dan panduan langkah-langkah selanjutnya.'
+        ]);
+
+        Faq::create([
+            'Pertanyaan' => 'Apakah Equalize Me Tersedia secara Gratis?',
+            'Jawaban' => 'Ya, Equalize Me dapat diunduh dan digunakan secara gratis.'
+        ]);
+
+        Faq::create([
+            'Pertanyaan' => 'Bagaimana Jaminan Keberlanjutan Pengembangan Equalize Me?',
+            'Jawaban' => 'Tim pengembang Equalize Me berkomitmen untuk terus mengembangkan dan meningkatkan aplikasi ini. Pembaruan berkala akan memastikan bahwa pengguna selalu mendapatkan fungsionalitas terkini dan keamanan terbaik.'
+        ]);
+
     }
 }

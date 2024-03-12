@@ -13,6 +13,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\quizController;
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\FaqController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -67,7 +69,7 @@ Route::get('/akun', [AkunController::class, 'index']);
 Route::post('/akun/{user}', [AkunController::class, 'store']);
 Route::get('/akun/{user}', [AkunController::class, 'store']);
 
-Route::get('/sandi/{user}', [AkunController::class, 'index2']);
+Route::get('/sandi', [AkunController::class, 'index2']);
 Route::post('/sandi/{user}', [AkunController::class, 'toSandi']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -80,5 +82,9 @@ Route::get('/berita/{id}/data', [BeritaController::class, 'getNewsData'])->name(
 // Route::get('/berita/{filtercarinews}', [BeritaController::class, 'searchNews']);
 
 // Route::get('/berita/search', [BeritaController::class, 'search']);
-Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+// Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 Route::post('/logout', [LogoutController::class, 'LogoutUser']);
+// Route::get('/berita/search', [BeritaController::class, 'search']);
+
+Route::post('/logout', [LogoutController::class, 'LogoutUser']);
+Route::get('faq', [FaqController::class, 'index']);

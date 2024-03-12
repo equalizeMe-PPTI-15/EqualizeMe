@@ -15,10 +15,10 @@ class AkunController extends Controller
         ]);
     }
 
-    public function index2(User $user){
+    public function index2(){
         return view('sandi', [
             "title" => "sandi",
-            "akuns" => $user
+            "akuns" => auth()->user()
         ]);
     }
 
@@ -63,7 +63,8 @@ class AkunController extends Controller
         // validasi dulu sebelum dimasukin ke $user
         $validateData = $request->validate([
             'name' => 'max:255',
-            'email' => 'email:dns|unique:users',
+            // 'email' => 'email:dns|unique:users',
+            'email' => 'sometimes|required|email:dns|unique:users,email,'.$user->id,
             'password' => 'min:5|max:255',
             'nik' => 'max:16|min:16|unique:users,nik',
             'alamat' => 'max:200',

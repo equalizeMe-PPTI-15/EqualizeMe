@@ -109,7 +109,7 @@
 
                         <br>
                         <label for="notelp" class="label-form">No. Telp
-                            <img src="../../Image/edit_pencil_icon_143022.png" alt="image">
+                            <img src="../../Image/edit_pencil_icon_143022.png" alt="image" class='notelp'>
                         </label>
                         <input autocomplete="off" type="text" id="notelp" name="notelp" value="{{ $akuns->phoneNumber }}" placeholder="08XXXXXXXXXXX" class="form-control @error('notelp') is-invalid @enderror" disabled>
                         {{-- <p id="errorMsgNoTelp" style="color: red;"></p> --}}
@@ -120,7 +120,7 @@
                         @enderror
                         <br>
                         <label for="alamat" class="label-form">Alamat
-                            <img src="../../Image/edit_pencil_icon_143022.png" alt="image" >
+                            <img src="../../Image/edit_pencil_icon_143022.png" alt="image" class='alamat'>
                         </label>
                         <input  type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" name="alamat" value="{{ $akuns->address }}" disabled>
                         
@@ -132,7 +132,7 @@
                         
                         <br>
                         <label for="email" class="label-form">Email
-                            <img src="../../Image/edit_pencil_icon_143022.png" alt="image" >
+                            <img src="../../Image/edit_pencil_icon_143022.png" alt="image" class='email' >
                         </label>
                         <input type="text" id="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ $akuns->email }}" placeholder="@gmail.com" disabled>
                         {{-- <p id="errorMsgEmail" style="color: red;"></p> --}}
@@ -251,26 +251,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
 
-        $("input").blur(function () {
-            $(this).attr('enabled');
-        });
+        // $("input").blur(function () {
+        //     $(this).prop("enabled", false);
+        // });
+        
     
         $(document).ready(function () {
 
-            $(".label-form img").click(function () {
-                let name = $(this).parent().attr('for');
-                $(`input[name=${name}]`).removeAttr('disabled');
-                $(`input[name=${name}]`).focus();
+            // $(".label-form img").click(function () {
+            //     let name = $(this).parent().attr('for');
+            //     $(`input[name=${name}]`).removeAttr('disabled');
+            //     $(`input[name=${name}]`).focus();
+            // });
+            $(".label-form img.email").click(function () {
+                $(`input[name='email']`).removeAttr('disabled');
+                $(`input[name='alamat']`).attr('disabled', 'disabled');
+                $(`input[name='notelp']`).attr('disabled', 'disabled');
             });
+            $(".label-form img.alamat").click(function () {
+                $(`input[name='alamat']`).removeAttr('disabled');
+                $(`input[name='email']`).attr('disabled', 'disabled');
+                $(`input[name='notelp']`).attr('disabled', 'disabled');
+            });
+            $(".label-form img.notelp").click(function () {
+                $(`input[name='notelp']`).removeAttr('disabled');
+                $(`input[name='alamat']`).attr('disabled', 'disabled');
+                $(`input[name='email']`).attr('disabled', 'disabled');
+            });            
 
             // $(".label-form img").dblclick(function () {
             //     let name = $(this).parent().attr('for');
             //     $(`input[name=${name}]`).attr('disabled', 'disabled');
             // });
-
+            
             
             // $("input").blur(function () {
-            //     $(this).attr('disabled', 'disabled');
+            //     $(this).prop('disabled', false);
             // });
 
             $("input").keypress(function (e) {
