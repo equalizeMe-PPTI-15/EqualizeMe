@@ -432,17 +432,6 @@
 <!-- script register login -->
 <script>
     
-    @auth
-        var dropdown = document.getElementById('dropdown');
-        if (dropdown) {
-            dropdown.style.display = 'none';
-        }
-
-        var profile = document.getElementById('profile');
-        profile.style.display = 'block';
-    @endauth
-    
-</script>
 
 <!-- swipper js -->
 <script src="../../JS/Template/carousel/swiper-bundle.min.js"></script>
