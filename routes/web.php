@@ -38,9 +38,9 @@ Route::get('/register', [RegisterController::class, 'index']);
 
 Route::post('/register', [RegisterController::class, 'store']);
 
-// Route::get('/register', function () {
-//     return view('register');
-// });
+Route::get('/register', function () {
+    return view('register');
+});
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
 
