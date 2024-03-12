@@ -81,21 +81,21 @@ function uploadVideo(){
     contentView.style.border = 0;
 }
 
-// Get textarea element
-const textarea = document.getElementById('deskripsi');
+// // Get textarea element
+// const textarea = document.getElementById('deskripsi');
 
-// Check if a previous value exists in local storage
-const storedValue = localStorage.getItem('textareaValue');
-if (storedValue) {
-  // If exists, set the textarea value
-  textarea.value = storedValue;
-}
+// // Check if a previous value exists in local storage
+// const storedValue = localStorage.getItem('textareaValue');
+// if (storedValue) {
+//   // If exists, set the textarea value
+//   textarea.value = storedValue;
+// }
 
-// Add event listener to textarea for changes
-textarea.addEventListener('keyup', () => {
-  // Save the new value to local storage
-  localStorage.setItem('textareaValue', textarea.value);
-});
+// // Add event listener to textarea for changes
+// textarea.addEventListener('keyup', () => {
+//   // Save the new value to local storage
+//   localStorage.setItem('textareaValue', textarea.value);
+// });
 
 
 // `<video style="width:100%; background-position:center; background-size:cover; height:100%;" src="${videoLink}" controls></video>`;

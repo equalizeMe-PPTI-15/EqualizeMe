@@ -32,7 +32,7 @@
 <body>
     <!-- content -->
     @if(session()->has('reported'))
-    <div class="alert alert-success alert-disissible fade show" role="alert" id="msgAlert">
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="msgAlert">
         {{ session('reported') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
@@ -66,7 +66,7 @@
                 <!-- <h1 class="title-pengaduan">Pengaduan</h1> -->
                 <div class="form-group mt-4">
                     <!-- <label for="nama"></label> -->
-                    <input type="text" class="form-control" id="nama" name="incidentAddress" placeholder="Tempat Kejadian" required value="{{ old('incidentAddress') }}">
+                    <input type="text" class="form-control" id="nama" name="incidentAddress" placeholder="Tempat Kejadian (ex : Jl. ..., Kec. ..., Kab ..., Kota ..." required value="{{ old('incidentAddress') }}">
                     @error('incidentAddress')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -159,6 +159,7 @@
 
     <!-- script -->
     <script src="../../JS/pengaduan/script-upload-file.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </script>

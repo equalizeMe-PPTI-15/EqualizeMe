@@ -72,6 +72,15 @@ Route::post('/akun/{user}', [AkunController::class, 'store']);
 Route::get('/akun/{user}', [AkunController::class, 'store']);
 
 Route::get('/quiz', [quizController::class, 'index']);
+Route::get('/quiz2', function () {
+    return view ('quiz2');
+});
+Route::get('/quiz3', function () {
+    return view ('quiz3');
+});
+Route::get('/quiz4', function () {
+    return view ('quiz4');
+});
 
 Route::post('/sandi', [AkunController::class, 'gantiSandi']);
 Route::get('/sandi/{user}', [AkunController::class, 'index2']);
