@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Session;
 class LoginController extends Controller
 {
     public function authenticate(Request $request){
+        // dd($request);
         $credentials = $request->validate([
             'nik' => 'required|max:16|min:16',
             'password' => 'required|min:5|max:255',
