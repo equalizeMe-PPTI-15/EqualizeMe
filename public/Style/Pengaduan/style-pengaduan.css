@@ -3,6 +3,13 @@
     padding: 0;
     box-sizing: 0;
 }
+
+#msgAlert {
+    position: absolute; 
+    top: 0;
+    width: 100%;
+}
+
 .container-content-pengaduan{
     width: 100%;
     display: flex;

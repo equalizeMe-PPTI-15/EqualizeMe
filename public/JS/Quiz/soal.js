@@ -1,57 +1,57 @@
 let questions =[
     {
         numb :1,
-        question:"Lorem, ipsum dolor sit amet consectetur",
-        answer:"C. Lorem, ipsum dolor sit amet consectetur",
+        question:"Permendikbudristek nomor .. Tahun .... tentang pencegahan dan penanganan kekerasan seksual di lingkungan perguruan tinggi.",
+        answer:"A. 30, 2021",
         options:[
-            "A. Lorem, ipsum dolor sit amet consecttur",
-            "B. Lorem, ipsum dolor sit amet consecteur",
-            "C. Lorem, ipsum dolor sit amet consectetur",
-            "D. Lorem, ipsum dolor sit amet consectetu"
+            "A. 30, 2021",
+            "B. 10, 2020",
+            "C. 8, 2022",
+            "D. 5, 2000"
         ]
     },
     {
         numb :2,
-        question:"Lorem, ipsum dolor sit amet consectetur",
-        answer:"A. Lorem, ipsum dolor sit amet consectetur",
+        question:"menurut data Komnas perempuan, di tahun 2020 terdapat ... laporan kekerasan seksual di lingkungan perguruan tinggi",
+        answer:"D. 10",
         options:[
-            "A. Lorem, ipsum dolor sit amet consectetur",
-            "B. Lorem, ipsum dolor sit amet consecetur",
-            "C. Lorem, ipsum dolor sit amet cnsctetur",
-            "D. Lorem, ipsum dolor sit amet conectetur"
+            "A. 51",
+            "B. 8",
+            "C. 20",
+            "D. 10"
         ]
     },
     {
         numb :3,
-        question:"Lorem, ipsum dolor sit amet consectetur?",
-        answer:"A. Lorem, ipsum dolor sit amet consectetur",
+        question:"Apa saja langkah-langkah pencegahan kekerasan seksual?",
+        answer:"D. Semua benar",
         options:[
-            "A. Lorem, ipsum dolor sit amet consectetur",
-            "B. Lorem, ipsum dolor sit amet consectetu",
-            "C. Lorem, ipsum dolor sit amet consectur",
-            "D. Lorem, ipsum dolor sit amet consectet"
+            "A. Pada lingkungan perguruan tinggi, semua orang wajib mempelajari modul pencegahan dan penanganan kekerasan seksual",
+            "B. Pembentukan satuan tugas khusus bersifat non-ad hoc",
+            "C. Penguatan budaya komunitas mahasiswa, pendidik, dan tenaga kependidikan di lingkungan perguruan tinggi",
+            "D. Semua benar"
         ]
     },
     {
         numb :4,
-        question:"Lorem, ipsum dolor sit amet consectetur?",
-        answer:"D. Lorem, ipsum dolor sit amet consectetur",
+        question:"Siapa saja yang dapat menjadi satgas khusus non-ad hoc?",
+        answer:"D. Semua benar",
         options:[
-            "A. rem, ipsum dolor sit amet consectetur",
-            "B. Lorem, ipsum dolor sit amet consecur",
-            "C. orem, ipsum dolor sit amet consectetur",
-            "D. Lorem, ipsum dolor sit amet consectetur"
+            "A. Pendidik",
+            "B. Tenaga kependidikan",
+            "C. Mahasiswa",
+            "D. Semua benar"
         ]
     },
     {
         numb :5,
-        question:"Lorem, ipsum dolor sit amet consectetur?",
-        answer:"D. Lorem, ipsum dolor sit amet consectetur",
+        question:"Apa syarat untuk menjadi satgas khusus non-ad hoc?",
+        answer:"C. tidak pernah terbukti melakukan kekerasan seksual",
         options:[
-            "A. Lorem, ipsum dolor sit amet consecteur",
-            "B. Lorem, ipsum dolor sit amet consectetr",
-            "C. Lorem, ipsum dolor sit amet consecte",
-            "D. Lorem, ipsum dolor sit amet consectetur"
+            "A. Pernah mendampingi korban tindakan kekerasan seksual",
+            "B. Punya minat terhadap isu kekerasan seksual",
+            "C. tidak pernah terbukti melakukan kekerasan seksual",
+            "D. Pernah mengikuti kajian tentang kekerasan seksual"
         ]
     }
 ]
