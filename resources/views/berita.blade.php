@@ -71,7 +71,7 @@
             <h3>Statistik Presentasi Pelecehan Seksual</h3>
         </div>
         <div class="banner-img-statistik">
-            <img src="../../Image/412503.jpg" alt=""
+            <img src="../../Image/statistik.png" alt=""
             style="width: 90%; max-width:90%; height: 100%; max-height: 100%; border-radius: 8px;">
         </div>
     </div>
