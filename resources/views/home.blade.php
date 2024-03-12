@@ -147,14 +147,14 @@
                             {{-- <a href="/sandi/{{ $akuns->id }}">Ubah Password</a> --}}
 
                             <li><a href="" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</a></li>
-                            
+                            @endauth
                             {{-- <li>
                                 <form action="/logout" method="POST" id="logoutForm">
                                 @csrf
                                     <button type="submit" class="dropdown-item" href="#">Logout</button>
                                 </form>
                             </li>
-                            @endauth
+                            --}}
                         </ul>
                     </div>
                     <!-- </div>  -->
