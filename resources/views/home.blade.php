@@ -149,7 +149,6 @@
 
                             <li><a href="" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</a></li>
                             @endauth
-                            @endauth
                             {{-- <li>
                                 <form action="/logout" method="POST" id="logoutForm">
                                 @csrf
