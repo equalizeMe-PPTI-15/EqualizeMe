@@ -101,7 +101,6 @@
                 </div>
                 <!-- button -->
 
-                show the relation between the user and the report
                 <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
 
                 <div class="container-button-pengaduan">

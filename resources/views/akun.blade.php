@@ -257,36 +257,36 @@
     
         $(document).ready(function () {
 
-            // $(".label-form img").click(function () {
-            //     let name = $(this).parent().attr('for');
-            //     $(`input[name=${name}]`).removeAttr('disabled');
-            //     $(`input[name=${name}]`).focus();
+            $(".label-form img").click(function () {
+                let name = $(this).parent().attr('for');
+                $(`input[name=${name}]`).removeAttr('disabled');
+                $(`input[name=${name}]`).focus();
+            });
+            // $(".label-form img.email").click(function () {
+            //     $(`input[name='email']`).removeAttr('disabled');
+            //     $(`input[name='alamat']`).attr('disabled', 'disabled');
+            //     $(`input[name='notelp']`).attr('disabled', 'disabled');
             // });
-            $(".label-form img.email").click(function () {
-                $(`input[name='email']`).removeAttr('disabled');
-                $(`input[name='alamat']`).attr('disabled', 'disabled');
-                $(`input[name='notelp']`).attr('disabled', 'disabled');
-            });
-            $(".label-form img.alamat").click(function () {
-                $(`input[name='alamat']`).removeAttr('disabled');
-                $(`input[name='email']`).attr('disabled', 'disabled');
-                $(`input[name='notelp']`).attr('disabled', 'disabled');
-            });
-            $(".label-form img.notelp").click(function () {
-                $(`input[name='notelp']`).removeAttr('disabled');
-                $(`input[name='alamat']`).attr('disabled', 'disabled');
-                $(`input[name='email']`).attr('disabled', 'disabled');
-            });            
+            // $(".label-form img.alamat").click(function () {
+            //     $(`input[name='alamat']`).removeAttr('disabled');
+            //     $(`input[name='email']`).attr('disabled', 'disabled');
+            //     $(`input[name='notelp']`).attr('disabled', 'disabled');
+            // });
+            // $(".label-form img.notelp").click(function () {
+            //     $(`input[name='notelp']`).removeAttr('disabled');
+            //     $(`input[name='alamat']`).attr('disabled', 'disabled');
+            //     $(`input[name='email']`).attr('disabled', 'disabled');
+            // });            
 
-            // $(".label-form img").dblclick(function () {
-            //     let name = $(this).parent().attr('for');
-            //     $(`input[name=${name}]`).attr('disabled', 'disabled');
-            // });
+            $(".label-form img").dblclick(function () {
+                let name = $(this).parent().attr('for');
+                $(`input[name=${name}]`).attr('disabled', 'disabled');
+            });
             
             
-            // $("input").blur(function () {
-            //     $(this).prop('disabled', false);
-            // });
+            $("input").blur(function () {
+                $(this).prop('disabled', false);
+            });
 
             $("input").keypress(function (e) {
                 if (e.which === 13) {

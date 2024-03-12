@@ -64,7 +64,7 @@
                 @enderror
 
                 <label for="confirm-password">Tulis Ulang Kata Sandi Baru</label>
-                <input type="password" id="confirm-password" placeholder="Kata Sandi harus lebih dari empat karakter" 
+                <input type="password" id="confirm-password" placeholder="Sesuai dengan Kata sandi baru" 
                 name="confirm-password" value="" required>
                 
                 @if(session('different'))

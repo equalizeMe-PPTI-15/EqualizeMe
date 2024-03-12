@@ -38,7 +38,7 @@
         @csrf
     <div class="form-group">   
     <label for="name">Nama Lengkap</label> 
-    <input autocomplete="off" type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required value="{{ old('name') }}">
+    <input autocomplete="off" type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required value="{{ old('name') }}" placeholder="Nama Lengkap">
         @error('name')
       <div class="invalid-feedback">
        {{ $message }}
@@ -65,7 +65,7 @@
     
             
     <label for="phoneNumber">No. telp</label>
-    <input autocomplete="off" type="number" class="form-control @error('phoneNumber') is-invalid @enderror" id="phoneNumber" name="phoneNumber" required value="{{ old('phoneNumber') }}" placeholder="08XXXXXXXXXXX [10 - 13 digit angka]">
+    <input autocomplete="off" type="number" class="form-control @error('phoneNumber') is-invalid @enderror" id="phoneNumber" name="phoneNumber" required value="{{ old('phoneNumber') }}" placeholder="08xxxxxxxxxxx [10 - 13 digit angka]">
         @error('phoneNumber')
       <div class="invalid-feedback">
         {{ $message }}
@@ -76,7 +76,7 @@
           
     <div class="form-group">   
     <label for="email">Email</label> 
-    <input autocomplete="off" type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" required value="{{ old('email') }}" placeholder="@">
+    <input autocomplete="off" type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" required value="{{ old('email') }}" placeholder="mengandung @">
     @error('email')
       <div class="invalid-feedback">
         {{ $message }}
