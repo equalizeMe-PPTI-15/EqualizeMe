@@ -378,7 +378,7 @@
                 <button class="button-selengkapnya-edu" onclick="toggle_popup_edu({{ $edu->idEducation }})">Kembali</button>
     
     
-                <a href="#">
+                <a href="/quiz{{$edu->idEducation}}">
                     <button class="button-quiz">Kuis</button>
                 </a>
             </div>
