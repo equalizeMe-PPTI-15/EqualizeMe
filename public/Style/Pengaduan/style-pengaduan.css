@@ -124,7 +124,8 @@
     font-weight: 600;
     padding: 6px 16px;
     width: 35%;
-    background-color: rgb(101, 202, 209);
+    /* background-color: rgb(101, 202, 209); */
+    background-color: #03848F;
     border-radius:6px;
     /* margin: 14px; */
     border: .1px solid grey;
@@ -170,7 +171,7 @@
     cursor: pointer;
     margin-bottom: 5%;
     border: .1px solid grey;
-    transition: 0.5s;
+    transition: 0.8s;
     color: white;
     text-align: center;
 }   

@@ -94,7 +94,7 @@
                             
                             <div class="buttonScore">
                                 <button class="Ulangi-button">Ulangi</button>
-                                <a href="../Project-HTML/education.html">
+                                <a href="/education">
                                 <button class="kembaliHome-button">Kembali</button>
                                 
                                 </a>
