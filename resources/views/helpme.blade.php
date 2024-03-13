@@ -97,7 +97,7 @@
             </li>
             <li class="nav-item" style="display: flex; align-items: start; ">
                 <div class="nav-help">
-                    <a href="#" class="nav-link" style=" padding-bottom:0;">
+                    <a href="#" class="nav-link active" style=" padding-bottom:0;">
                         <div class="nav-helpme" style=" width: 100%; height: 100%; ">
                             <img src="Image/helpme.png" width="70" height="40" alt="HelpMe"
                                 style="margin-top: 1%;">
@@ -117,7 +117,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/pengaduan" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-exclamation-octagon" viewBox="0 0 16 16" alt="Pengaduan">
                         <path

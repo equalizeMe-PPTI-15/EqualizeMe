@@ -378,7 +378,7 @@
                 <button class="button-selengkapnya-edu" onclick="toggle_popup_edu({{ $edu->idEducation }})">Kembali</button>
     
     
-                <a href="#">
+                <a href="/quiz{{$edu->idEducation}}">
                     <button class="button-quiz">Kuis</button>
                 </a>
             </div>
@@ -395,17 +395,17 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Yaqueen mau keluar???</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Yakin mau keluar?</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               Hati-hati dengan keluar berarti menyadari sepenuhnya harus login lagi sebelum lapor
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:red;">Ahh pikir lagi deh</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:red;">Tidak</button>
               <form action="/logout" method="POST" id="logoutForm">
                 @csrf
-                    <button type="submit" class="btn btn-secondary" href="#">Yaqueen dong bang</button>
+                    <button type="submit" class="btn btn-secondary" href="#" style="background-color:#03848F;">Yakin</button>
                 </form>
               {{-- <button type="button" class="btn btn-primary">Yaqueen dong bang</button> --}}
             </div>
