@@ -179,7 +179,7 @@
                     </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
-                            <li><a class="dropdown-item" href="/sandi">Ubah Sandi</a></li>
+                            <li><a class="dropdown-item" href="/sandi/{{ auth()->user()->id }}">Ubah Sandi</a></li>
                             {{-- <a href="/sandi/{{ $akuns->id }}">Ubah Password</a> --}}
 
                             <li><a href="" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</a></li>

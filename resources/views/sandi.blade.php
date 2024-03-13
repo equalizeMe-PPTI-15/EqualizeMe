@@ -58,8 +58,8 @@
                 </div>
             @endif
                 <!-- <p><a href="#">Lupa Kata Sandi?</a></p> -->
-                <div class="buttonsubmit">
-                    <button type="submit">Ubah Kata Sandi</button>
+                <div class="buttonsubmit" >
+                    <button type="submit" class="btn btn-primary">Ubah Kata Sandi</button>
                 </div>
                 
             </form>

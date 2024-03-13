@@ -13,7 +13,7 @@ class RegisterController extends Controller
             'title' => 'Register',
             'active' => 'register'
         ]);
-    }
+    }4
 
     public function store(Request $request) {
         $validatedData = $request->validate([
