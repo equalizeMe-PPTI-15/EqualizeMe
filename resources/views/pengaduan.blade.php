@@ -84,7 +84,7 @@
                     </div>
                     @enderror
                     <!-- <label for=""></label> -->
-                    <input type="date" class="form-control" id="tanggal" name="dateOfIncident" placeholder="Waktu Kejadian" required value="{{ old('dateOfIncident') }}">
+                    <input type="date" class="form-control" id="tanggal" name="DateOfIncident" placeholder="Waktu Kejadian" required value="{{ old('DateOfIncident') }}">
                     @error('dateOfIncident')
                     <div class="invalid-feedback">
                         {{ $message }}
