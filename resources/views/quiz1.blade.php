@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <main class="container-quiz">
+    <main class="container-quiz" >
         <div class="main-container ">
             <div class="container-left">
                 <section class="quiz-section">

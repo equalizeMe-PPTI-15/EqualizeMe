@@ -33,6 +33,8 @@ body{
     width: 100%;
     min-height: 93vh;
     pointer-events: auto;
+    overflow: hidden;
+
     /* border: solid red; */
 
 }
