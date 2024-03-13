@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('description');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
-            // $table->string('user_id')->nullable();
             // $table->integer('picture / video') ??? masih gatau caranya ntar ae;
         });
     }

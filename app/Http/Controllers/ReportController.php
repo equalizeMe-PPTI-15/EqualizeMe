@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Report;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class ReportController extends Controller
 {
@@ -15,8 +14,7 @@ class ReportController extends Controller
     }
 
     public function store (Request $request) {
-        // $user = Auth::user();
-        // dd($user);
+
         $validatedData = $request->validate([
             'input-file' => 'required|file|mimes:jpeg,jpg,png,gif,mp4,mp3,mov,avi|min:1',
             'incidentAddress' => 'required|max:255',
@@ -26,9 +24,6 @@ class ReportController extends Controller
             // 'updated_at' => 'exclude'
         ]);
 
-        // $validatedData['user_id'] = $user->id;
-        // Report::
-        // $validatedData['user_id'] = $user->id;
         $validatedData['input-file'] = $request->file('input-file')->store('file_pengaduan'); 
 
         Report::create($validatedData);
